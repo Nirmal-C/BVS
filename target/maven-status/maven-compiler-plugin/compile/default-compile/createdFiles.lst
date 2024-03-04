@@ -25,6 +25,8 @@ bvs\org\service\DhammaVideoService.class
 bvs\org\datatable\DataTableRepo.class
 bvs\org\config\MainWebAppInitializer.class
 bvs\org\controllers\DhammaVideoController.class
+bvs\org\model\NewsLetter.class
+bvs\org\dto\NewsLetterDataTable.class
 bvs\org\model\SchoolCalendar.class
 bvs\org\config\DbConfig.class
 bvs\org\repo\SyllabusRepo.class
@@ -35,8 +37,10 @@ bvs\org\controllers\SyllabusController.class
 bvs\org\config\UserMail$1.class
 bvs\org\service\LoginService.class
 bvs\org\config\MvcWebConfig.class
+bvs\org\controllers\NewsLetterController.class
 bvs\org\datatable\DataTablesResponse.class
 bvs\org\config\PasswordMail$1.class
+bvs\org\service\NewsLetterService.class
 bvs\org\repo\DhammaContentRepo.class
 bvs\org\service\StaffService.class
 bvs\org\service\SchoolCalendarService.class
@@ -51,6 +55,7 @@ bvs\org\model\DhammaContent.class
 bvs\org\dto\DhammaVideoDto.class
 bvs\org\controllers\LoginController.class
 bvs\org\service\UserService.class
+bvs\org\repo\NewsLetterRepo.class
 bvs\org\config\PasswordMail.class
 bvs\org\repo\FormRepo.class
 bvs\org\datatable\DataTableRequest$Search.class

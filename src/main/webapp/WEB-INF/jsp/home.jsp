@@ -25,7 +25,7 @@
 
 
             .container_12 {
-                max-width: 1282px;
+                max-width: 1455px;
                 margin: 0 auto;
             }
 
@@ -63,6 +63,7 @@
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
                 transition: box-shadow 0.3s ease;
+                height: 200px;
             }
 
             .home-block-area:hover {
@@ -131,9 +132,9 @@
                                 <div class="region region-home-area-2-left">
                                     <div id="block-block-32" class="block block-block">
                                         <div class="content">
-                                            <h2><img alt="" src="assets/img/covid.png"
+                                            <h3><img alt="" src="assets/img/covid.png"
                                                      style="float:left; height:115px; margin-left:0px; margin-right:10px; width:130px" />BVS
-                                                Health and Safety protocols for COVID - 19</h2>
+                                                Health and Safety protocols for COVID - 19</h3>
                                             <p>Under the BC disease control, guidelines we have all had to make significant behavioral
                                                 changes, and new safety procedures to reduce the spread of COVID-19. Hence all the BVS
                                                 devotees....</p>
@@ -147,9 +148,9 @@
                                 <div class="region region-home-area-2-right">
                                     <div id="block-block-31" class="block block-block">
                                         <div class="content">
-                                            <h2><img alt="" src="assets/img/garden.png"
+                                            <h3><img alt="" src="assets/img/garden.png"
                                                      style="float:left; height:110px; margin-left:0px; margin-right:20px; width:110px" />Town
-                                                Hall Meeting - BVS Garden Beautification Project</h2>
+                                                Hall Meeting - BVS Garden Beautification Project</h3>
                                             <p>We concluded a successful town hall meeting via Zoom on Saturday, the 19th December 2020
                                                 from 6:00 pm to 7:00 pm and received very valuable comments and suggestions</p>
                                             <p>We still would like to receive your valuable comments and suggestions on this project</p>
@@ -157,25 +158,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="home-block-area">
-                                <div class="region region-home-area-1">
-                                    <div id="block-block-2" class="block block-block">
-                                        <h2>Buddhist Vihara Society in BC</h2>
-                                        <div class="content">
-                                            <p>Registered under the Canadian Charities Act, Buddhist Vihara Society
-                                                in BC, Reg#89234 2775RT0001, (BVS) is an organization that provides
-                                                various charitable services to the Canadian Society and to other
-                                                communities who are in need of help. For over twenty years (20
-                                                years) BVS has provided and helped in various ways to fellow
-                                                Canadians and other communities around the world such as earthquake
-                                                victims of Nepal, flood victims of Sri Lanka, fellow Canadians who
-                                                were affected by wildfire in Fort McMurray, Alberta, just to name
-                                                a few. ...</p>
-                                            <p><a class="readmore" href="What-We-Do">READ MORE</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -189,20 +172,24 @@
                                         <div class="content">
                                             <div class="home-links">
                                                 <div class="dana-link content">
-                                                    <a class="image" href="Dana-Calender"><img src="assets/img/calendar.png" name="Image3" width="220" height="170" border="0"></a>
-                                                    <h3><a href="Dana-Calender">Dana Calendar</a></h3>
-                                                    <p>All dana sponsors are kindly reminded to confirm your
-                                                        dana arrangement two days (2) prior to the dana date by
-                                                        calling the temple at 604.888.1162.</p>
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <a class="image" href="Dana-Calender">
+                                                                <img src="assets/img/calendar.png" name="Image3" width="180" height="140" border="0">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h3><a href="Dana-Calender">Dana Calendar</a></h3>
+                                                            <p>All dana sponsors are kindly reminded to confirm your
+                                                                dana arrangement two days (2) prior to the dana date by
+                                                                calling the temple at 604.888.1162.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+
                                                 </div>
-                                                <div class="suport-link content">
-                                                    <a class="image" href="Support-Us"><img src="assets/img/support.png" name="Image2" width="170" height="170" border="0"></a>
-                                                    <h3><a href="Support-Us">Support Us</a></h3>
-                                                    <p>We request that anyone who requires the services of our
-                                                        society become a member. In order to become a member,
-                                                        please <a href="Membership"
-                                                                  target="_blank">register</a></p>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -211,6 +198,62 @@
                             <!-- Additional Row 3 (New) -->
 
                         </div>
+                    </div>
+
+                    <div class="grid_6 alpha omega">
+                        <div class="column-fix">
+                            <!-- Row 1 (Moved from Row 3) -->
+                            <div class="home-block-area">
+                                <div class="region region-home-area-2">
+                                    <div id="block-block-13" class="block block-block">
+                                        <div class="content">
+                                            <div class="home-links">
+                                                <div class="dana-link content">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <a class="image" href="Support-Us">
+                                                                <img src="assets/img/support.png" name="Image2" width="170" height="170" border="0">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h3><a href="Support-Us">Support Us</a></h3>
+                                                            <p>We request that anyone who requires the services of our
+                                                                society become a member. In order to become a member,
+                                                                please <a href="Membership"
+                                                                          target="_blank">register</a></p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional Row 3 (New) -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-block-area" style=" max-width: 1455px; margin: 0 auto;">
+            <div class="region region-home-area-1">
+                <div id="block-block-2" class="block block-block">
+                    <h3>Buddhist Vihara Society in BC</h3>
+                    <div class="content">
+                        <p>Registered under the Canadian Charities Act, Buddhist Vihara Society
+                            in BC, Reg#89234 2775RT0001, (BVS) is an organization that provides
+                            various charitable services to the Canadian Society and to other
+                            communities who are in need of help. For over twenty years (20
+                            years) BVS has provided and helped in various ways to fellow
+                            Canadians and other communities around the world such as earthquake
+                            victims of Nepal, flood victims of Sri Lanka, fellow Canadians who
+                            were affected by wildfire in Fort McMurray, Alberta, just to name
+                            a few. ...</p>
+                        <p><a class="readmore" href="What-We-Do">READ MORE</a></p>
                     </div>
                 </div>
             </div>

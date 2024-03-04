@@ -1,0 +1,402 @@
+<%@ page pageEncoding="UTF-8" %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Marvel:wght@700&display=swap"rel="stylesheet">
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+    :root {
+        --accent-color: #000000;
+        --gradient-color: #FBFBFB;
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.8rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #logo-floater{
+
+        margin-right: 150px;
+        background-color: #000000;
+
+    }
+    .a{
+        text-decoration: none !important;
+        color: black;
+        font-size: 1.1rem;
+    }
+
+
+    .menu {
+        top: 0;
+        left: 10px;
+        right: 0px;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        background: #944004;
+    }
+
+    .menu > ol {
+        list-style: none;
+        margin-top: 5px;
+        margin-right: 0px;
+        padding: 0;
+        justify-content: space-around;
+
+    }
+
+    .menu > ol > li {
+        color: #000000;
+        background: darken(#000000, 75%);
+        border-left: 5px solid var(--gradient-color);
+        margin-bottom: 1px;
+        position:  relative;
+        transition: 0.5s;
+        text-transform: uppercase;
+    }
+
+
+
+
+    .menu > ol > li:nth-child(1) {
+        --accent-color: #003bfd;
+    }
+
+    .menu > ol > li:nth-child(2) {
+        --accent-color: #c1c423;
+    }
+
+    .menu > ol > li:nth-child(3) {
+        --accent-color: #f30101;
+    }
+
+    .menu > ol > li:nth-child(4) {
+        --accent-color: #ffffff;
+    }
+
+    .menu > ol > li:nth-child(4):hover {
+        --accent-color: #000000;
+    }
+
+    .menu > ol > li:nth-child(4)::after {
+        --accent-color: #000000;
+    }
+
+    .menu > ol > li:nth-child(5) {
+        --accent-color: #ff7f08;
+    }
+
+    .menu > ol > li:nth-child(6) {
+        --accent-color: #003bfd;
+    }
+
+    .menu > ol > li:nth-child(7) {
+        --accent-color: #c1c423;
+    }
+
+
+    .menu > ol > li a {
+        color: #ffffff;
+        display: block;
+        padding: 15px;
+        position: relative;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    .menu > ol > li:hover,
+    .menu > ol > li:focus,
+    .menu > ol > li:focus-within {
+        z-index: 1;
+    }
+
+    .menu > ol > li:hover:after,
+    .menu > ol > li:focus:after,
+    .menu > ol > li:focus-within:after {
+        background: var(--accent-color);
+        max-width: 800px;
+    }
+
+    .menu > ol > li:focus,
+    .menu > ol > li:focus-within {
+        .sub-menu {
+            max-height: 500px;
+        }
+
+    }
+
+    .menu > ol > li:after {
+        background: darken(#bd3838, 75%);
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: 0.5s;
+        max-width: 0;
+        overflow: hidden;
+    }
+
+
+    .menu > ol > li .sub-menu {
+        background-color: var(--accent-color);
+        position:absolute;
+        left: 0;
+        top: 100%;
+        border-left: 1px solid #ffffff;
+        border-width: 5px;
+        list-style: none;
+        max-height:0;
+        overflow: hidden;
+        padding-left: 7.5px;
+        transition: 0.5s;
+        z-index: 1;
+    }
+
+
+    .menu .sub-menu li {
+        font-size: 0.9em;
+    }
+
+    .menu .sub-menu li:hover,
+    .menu .sub-menu a:focus {
+        background: fade(darken(#000000, 75%), 30%);
+    }
+
+    .menu .sub-menu li a:after {
+        bottom: 5px;
+        height: 1px;
+    }
+
+    .menu .sub-menu li:hover a,
+    .menu .sub-menu a:focus {
+        &:after {
+            width: 15px;
+        }
+    }
+
+
+
+
+    @media (min-width: 600px) {
+        a:focus,
+        a:hover {
+            position: relative;
+            &:after {
+                width: 100px;
+            }
+        }
+
+        a:after {
+            left: 0;
+            right: 0;
+            margin: auto;
+
+
+        }
+
+        .menu {
+
+            margin: 0;
+            margin-top: 0;
+        }
+
+        .menu > ol {
+
+            display: block;
+            max-width: none;
+            text-align: center;
+            margin-right: 4px;
+            margin-top: 15px;
+        }
+
+
+        #logo-floater{
+
+
+            padding: 0;
+            background-color: #000000;
+
+        }
+
+
+
+        .menu > ol > li {
+            border-top: 5px solid var(--accent-color);
+            border-left: 0;
+            display: inline-block;
+            margin-left: -5px;
+            vertical-align: top;
+            width: 150px;
+        }
+
+        .menu > ol > li:hover,
+        .menu > ol > li:focus,
+        .menu > ol > li:focus-within {
+
+
+            .sub-menu {
+                max-height: 750px;
+            }
+        }
+
+        .menu > ol > li a:not(:last-child):before {
+            right: 12.5px;
+        }
+
+        .menu > ol > li:hover a {
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+
+
+
+    }
+
+    @media (max-width: 600px) {
+        .menu > ol > li {
+            width: 150px;
+        }
+
+    }
+
+    @keyframes rotateImg {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #rotatingImg {
+        animation: rotateImg 10s linear infinite; /* Adjust the duration and timing function as needed */
+    }
+
+
+</style>
+</head>
+<body class="html front not-logged-in no-sidebars page-node i18n-en">
+
+    <nav class="menu">
+        <div class="img">
+            <a href="home" title="home">
+                <img src="https://bvs.org/sites/default/files/logo_0.png" style="width: 80%;margin-top: 1rem;" alt="Home" />
+            </a> 
+        </div>
+
+        <ol>
+            <li class="menu-item"><a href="home">Home</a></li>
+
+            <li class="menu-item">
+                <a href="#aboutus" class="dropbtn">About Us</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="https://www.cra-arc.gc.ca/ebci/haip/srch/t3010form22quickview-eng.action?r=http%3A%2F%2Fwww.cra-arc.gc.ca%3A80%2Febci%2Fhaip%2Fsrch%2Fbasicsearchresult-eng.action%3Fk%3Dbuddhist%2B%2Bvihara%26amp%3Bs%3Dregistered%26amp%3Bp%3D1%26amp%3Bb%3Dtrue&fpe=2013-03-31&b=892342775RR0001&n=BUDDHIST%20VIHARA%20SOCIETY%20IN%20B%20C" target="_blank">Charitable Status (CRA)</a></li>
+                    <li class="menu-item"><a href="history">History</a></li>
+                    <li class="menu-item"><a href="What-We-Do">What we do</a></li>
+                    <li class="menu-item"><a href="Vision-Mission">Vision & Mission</a></li>
+                    <li class="menu-item"><a href="Resident-Monks">Resident Monks</a></li>
+                    <li class="menu-item"><a href="Board-Directors">Board of Directors</a></li>
+                    <li class="menu-item"><a href="Religious-Advisors">Religious Advisors</a></li>
+                    <li class="menu-item"><a href="Audit-Committee">Audit Committee</a></li>
+
+                </ol>
+            </li>
+
+            <li class="menu-item"><a href="Dhamma-Videos">Dhamma Resources</a></li>
+
+            <li class="menu-item">
+                <a href="#dhammaschool" class="dropbtn">Dhamma School</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="Staff">Staff</a></li>
+                    <li class="menu-item"><a href="Classes">Classes</a></li>
+                    <li class="menu-item"><a href="School-Calender">School Calendar</a></li>
+                </ol>
+            </li>
+
+            <li class="menu-item">
+                <a href="#forms" class="dropbtn">Forms</a>
+                <ol class="sub-menu" id="dynamicForms">
+                    <!-- Additional form items will be appended here dynamically -->
+                    <li class="menu-item"><a href="Membership">Membership Form</a></li>
+                    <li class="menu-item"><a href="assets/img/PreAuthorizedPayment Form.pdf" target="_blank">PAP Form</a></li>
+
+                </ol>
+            </li>
+
+            <li class="menu-item">
+                <a href="#community-engagement" class="dropbtn">Community Engagement</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="Project-Events">Projects & Events</a></li>
+                    <li class="menu-item"><a href="NewsLetter">Newsletters</a></li>
+                    <li class="menu-item"><a href="Veg-Order">Vegetable Ordering</a></li>
+                </ol>
+            </li>
+
+            <li class="menu-item">
+                <a href="#events" class="dropbtn">Schedule</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="Dana-Calender">Dana Calendar</a></li>
+                    <li class="menu-item"><a href="Event-Calender">Events Calendar</a></li>
+
+                </ol>
+            </li>
+
+
+
+        </ol>
+        <div class="img-damma" style="width: 5em;">
+
+            <img id="rotatingImg" src="assets/img/damma.png" style="width: 100%;margin-top: 1rem;" alt="Home" />
+
+        </div>
+    </nav>
+
+    <script>
+
+
+
+    </script>
+    <script>
+        fetch('form/details')
+                .then(response => response.json())
+                .then(data => {
+                    const dynamicForms = document.getElementById('dynamicForms');
+                    // Append each additional form item to the dynamicForms list
+                    data.forEach(form => {
+                        const li = document.createElement('li');
+                        li.className = 'menu-item';
+                        const a = document.createElement('a');
+                        a.href = 'Forms';
+                        a.textContent = form.name; // Assuming each form object has a 'name' property
+                        a.addEventListener('click', function (event) {
+                            event.preventDefault(); // Prevent default link behavior
+                            fetchFormDetails(form.id); // Fetch details when the item is clicked
+                        });
+                        li.appendChild(a);
+                        dynamicForms.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error fetching additional forms:', error));
+
+        function fetchFormDetails(formId) {
+            // Redirect to the forms page
+            window.location.href = 'Forms?formId=' + formId;
+        }
+
+
+    </script>

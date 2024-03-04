@@ -1,0 +1,98 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<style>
+    h1 {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        line-height: 28px;
+        font-weight: 700;
+        position: relative;
+        text-transform: capitalize;
+    }
+    footer{
+        bottom: 0;
+
+    }
+    #goog-gt-tt,.VIpgJd-ZVi9od-ORHb,.skiptranslate   {
+        display: none !important;
+    }
+</style>
+<footer>
+    <div id="contact" class="contact-area" style="margin-top: 1rem;background-color: #cf8e65">
+        <div class="contact-inner ">
+            <div class="contact-overly"></div>
+            <div class="containers" style="font-family: myFontB">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h1>Contact us</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1rem">
+                    <!-- Start contact icon column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="contact-icon text-center">
+                            <div class="single-icon">
+                                <i class="fa fa-mobile"></i>
+                                <p style="font-size: medium">
+                                    (604) 888 1162
+                                    <br>
+                                    <span>( If there is no answer, please leave a voice message. We will return it as soon as possible)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start contact icon column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="contact-icon text-center">
+                            <div class="single-icon">
+                                <i class="fa fa-envelope-o"></i>
+                                <p style="font-size: medium"> 
+                                    Email: info@bvs.org – All general inquiries<br>
+                                    invitations@bvs.org – All invitations<br>
+                                    treasurer@bvs.org – All correspondence related to financial matters<br>
+                                    principal@bvs.org – All Dhamma School related correspondence<br>
+                                    askbhante@bvs.org – Any Dhamma related questions<br>
+                                    newsletter@bvs.org – All correspondence related to newletter <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start contact icon column -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="contact-icon text-center">
+                            <div class="single-icon">
+                                <i class="fa fa-map-marker"></i>
+                                <p style="font-size: medium">
+                                    18941, 80th Avenue, Surrey, BC, V4N4J1<br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-area-bottom" style="background-color: #d1824f">
+        <div class="containers">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>
+                            <br> &copy;  2024, Buddhist Vihara Society in BC<br>
+                        </p>
+                    </div>
+                    <div class="credits">
+
+                        <!--All <a href="https://bootstrapmade.com/">gfsafdgadd</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</footer>

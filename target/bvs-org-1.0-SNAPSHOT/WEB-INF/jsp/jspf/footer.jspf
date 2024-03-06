@@ -12,12 +12,14 @@
         text-transform: capitalize;
     }
     footer{
-        bottom: 0;
+        position: absolute;
+        width: 100%;
 
     }
     #goog-gt-tt,.VIpgJd-ZVi9od-ORHb,.skiptranslate   {
         display: none !important;
     }
+
 </style>
 <footer>
     <div id="contact" class="contact-area" style="margin-top: 1rem;background-color: #cf8e65">

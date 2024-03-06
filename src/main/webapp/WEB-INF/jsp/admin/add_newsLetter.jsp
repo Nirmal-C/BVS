@@ -88,7 +88,7 @@
                 background-color: #4682b4; /* Set a darker background color for the active tab */
                 color: #fff; /* Set the text color for the active tab */
             }
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 989px) {
                 /* Adjust styles for smaller screens */
                 .para {
                     padding-left: 1em;
@@ -97,6 +97,28 @@
                 .container-s {
                     padding-left: 1em;
                 }
+                .form-group{
+                    width: 25rem;
+                }
+                .ttt{
+                    width: 25rem;
+                }
+
+            }
+            @media only screen and (max-width: 449px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+                .form-group{
+                    width: 20rem;
+                }
+
+
             }
         </style>
     </head>
@@ -155,15 +177,15 @@
                         <div class="card">
                             <div class="card-block p-b-0">
                                 <div class="card-header">
-                                    <div class="card-header-right">
+                                    <div class="card-header-left">
                                         <ul class="list-unstyled card-option">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group"style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
                                         <label for="month">Please Enter Month Here<span class="text-danger">*</span></label>
                                         <input id="month" type="text" name="month" class="form-control"  required autocomplete="off">
                                     </div>
@@ -172,8 +194,8 @@
 
 
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
                                         <label for="file">Upload Your File Here<span class="text-danger">*</span></label>
                                         <input id="file" type="file" >
                                         <div class="card-footer d-flex justify-content-end">
@@ -183,7 +205,7 @@
 
 
 
-                                    <div class="col-lg-6 col-12 ">
+                                    <div class="col-lg-6 col-md-12 ">
 
                                     </div> 
                                 </div>

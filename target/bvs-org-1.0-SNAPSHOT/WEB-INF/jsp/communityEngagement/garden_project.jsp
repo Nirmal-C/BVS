@@ -126,11 +126,10 @@
 
         </div>
         <div class="background-image"></div>
-        <div class="para" >
-
-            <img src="assets/img/Garden_Project2.jpg" alt="Garden">
-
+        <div class="para">
+            <img src="assets/img/Garden_Project2.jpg" alt="Garden" style="width: 100%; height: auto;">
         </div>
+
         <div class="para" >
 
             <h3 style="color: #417CE8;font-weight: 900;">Community Garden</h3>
@@ -177,7 +176,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/1.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/1.jpeg')" />
+                                <img src="assets/img/garden/1.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/1.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -187,8 +186,8 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <video width="300" height="300" controls >
-                                    <source src="assets/img/garden/2.mp4" type="video/mp4">
+                                <video style="width: 100%; height: 10rem;" controls >
+                                    <source src="assets/img/garden/2.mp4" type="video/mp4" >
                                 </video>
                             </div>
                         </div>
@@ -199,7 +198,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/3.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/3.jpeg')" />
+                                <img src="assets/img/garden/3.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/3.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -211,7 +210,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <video width="300" height="300" controls >
+                                <video style="width: 100%; height: 10rem;" controls >
                                     <source src="assets/img/garden/4.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -223,7 +222,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/5.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/5.jpeg')" />
+                                <img src="assets/img/garden/5.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/5.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -234,7 +233,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/6.jpg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/6.jpg')" />
+                                <img src="assets/img/garden/6.jpg" style="width: 100%; height: 10rem;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/6.jpg')" />
                             </div>
                         </div>
                     </div>
@@ -246,7 +245,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <video width="300" height="300" controls >
+                                <video style="width: 100%; height: 10rem;" controls >
                                     <source src="assets/img/garden/7.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -258,7 +257,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/8.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/8.jpeg')" />
+                                <img src="assets/img/garden/8.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/8.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -269,7 +268,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/9.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/9.jpeg')" />
+                                <img src="assets/img/garden/9.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/9.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -282,7 +281,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/10.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/10.jpeg')" />
+                                <img src="assets/img/garden/10.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/10.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -292,7 +291,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/11.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/11.jpeg')" />
+                                <img src="assets/img/garden/11.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/11.jpeg')" />
                             </div>
                         </div>
                     </div>
@@ -303,7 +302,7 @@
                         <div class="gallery-thumb-outer">
                             <div class="gallery-thumb-inner">
                                 <!-- Add onclick event to call openModal function -->
-                                <img src="assets/img/garden/12.jpeg" width="300" height="300" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/12.jpeg')" />
+                                <img src="assets/img/garden/12.jpeg" style="width: 100%; height: auto;" title="View larger image" alt="View larger image" onclick="openModal('assets/img/garden/12.jpeg')" />
                             </div>
                         </div>
                     </div>

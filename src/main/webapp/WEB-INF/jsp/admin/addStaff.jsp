@@ -107,6 +107,22 @@
                     padding-left: 1em;
                 }
             }
+
+            @media only screen and (max-width: 449px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+                .form-group{
+                    width: 20rem;
+                }
+
+
+            }
         </style>
     </head>
     <body>
@@ -165,37 +181,37 @@
                         <div class="card">
                             <div class="card-block p-b-0">
                                 <div class="card-header">
-                                    <div class="card-header-right">
+                                    <div class="card-header">
                                         <ul class="list-unstyled card-option">
                                             <li><i class="feather icon-x cls-card"></i></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
                                         <label for="grade">Please Enter the Grade Here<span class="text-danger">*</span></label>
                                         <input id="grade" type="text" name="grade" class="form-control"  required autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
                                         <label for="teacher">Please Enter the Teacher's Name Here<span class="text-danger">*</span></label>
                                         <input id="teacher" type="text" name="teacher" class="form-control"  required autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
                                         <label for="sub_teacher">Please Enter the Substitute Teacher's Name Here<span class="text-danger">*</span></label>
                                         <input id="sub_teacher" type="text" name="sub_teacher" class="form-control"  required autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
 
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
-                                        </div>
+
+                                        <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
+
                                     </div> 
                                 </div> 
                             </div>

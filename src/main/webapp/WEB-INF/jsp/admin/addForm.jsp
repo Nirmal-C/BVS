@@ -97,6 +97,7 @@
                 .container-s {
                     padding-left: 1em;
                 }
+
             }
         </style>
     </head>
@@ -153,7 +154,7 @@
 
 
                     <div class="" id="formSection" style="display: none">
-                        <div class="card">
+                        <div class="cards">
                             <div class="card-block p-b-0">
                                 <div class="card-header">
                                     <div class="card-header-right">
@@ -163,30 +164,28 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12"> <!-- Adjusted column sizes for mobile responsiveness -->
+                                    <div class="form-group">
                                         <label for="name">Please Enter the Form Name Here<span class="text-danger">*</span></label>
-                                        <input id="name" type="text" name="name" class="form-control"  required autocomplete="off">
+                                        <input id="name" type="text" name="name" class="form-control" required autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                <div class="col-lg-6 col-md-12"> <!-- Adjusted column sizes for mobile responsiveness -->
+                                    <div class="form-group">
                                         <label for="iframe">Please Enter the I FRAME link Here (Google form Iframe Link)<span class="text-danger">*</span></label>
-                                        <input id="iframe" type="text" name="iframe" class="form-control"  required autocomplete="off">
+                                        <input id="iframe" type="text" name="iframe" class="form-control" required autocomplete="off">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
-
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
-                                        </div>
-                                    </div> 
-                                </div> 
+                                <div class="col-12"> <!-- Full width on mobile -->
+                                    <div class="form-group">
+                                        <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 

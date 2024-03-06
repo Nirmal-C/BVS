@@ -80,7 +80,7 @@
                     padding-left: 1em;
                 }
             }
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 376px) {
                 /* Adjust styles for smaller screens */
                 .para {
                     padding-left: 1em;

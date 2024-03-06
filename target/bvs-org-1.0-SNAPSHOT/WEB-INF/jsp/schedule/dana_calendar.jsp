@@ -25,6 +25,10 @@
                 text-align: justify;
                 padding-top: 2em;
                 padding-bottom: 2em;
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
             }
             .container-s {
                 background-color: #E5E5E5;
@@ -51,14 +55,18 @@
                 opacity: 0.2;
                 z-index: -1;/* Adjust the opacity value as needed (0.0 to 1.0) */
             }
+            .para iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Media query for mobile devices */
             @media only screen and (max-width: 768px) {
-                /* Adjust styles for smaller screens */
                 .para {
-                    padding-left: 1em;
-                    padding-right: 1em;
-                }
-                .container-s {
-                    padding-left: 1em;
+                    padding-bottom: 75%; /* Adjust the aspect ratio for mobile */
                 }
             }
         </style>
@@ -77,10 +85,10 @@
 
         </div>
         <div class="background-image"></div>
-        <div class="para" >
-            <iframe src="https://calendar.google.com/calendar/embed?src=9c59283d3cb452d406c7682f8d5f53f96f367b193cc660d4404a052a55b33386%40group.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+        <div class="para">
+            <iframe src="https://calendar.google.com/calendar/embed?src=9c59283d3cb452d406c7682f8d5f53f96f367b193cc660d4404a052a55b33386%40group.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" class="responsive-iframe" frameborder="0" scrolling="no"></iframe>
         </div>
+
 
         <%@include file="../jspf/footer.jspf" %>
         <%@include file="../jspf/scripts.jspf" %>

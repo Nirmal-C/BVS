@@ -88,7 +88,7 @@
                 background-color: #4682b4; /* Set a darker background color for the active tab */
                 color: #fff; /* Set the text color for the active tab */
             }
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 989px) {
                 /* Adjust styles for smaller screens */
                 .para {
                     padding-left: 1em;
@@ -97,7 +97,32 @@
                 .container-s {
                     padding-left: 1em;
                 }
+                .form-group{
+                    width: 25rem;
+                }
+                .ttt{
+                    width: 25rem;
+                }
+
             }
+            @media only screen and (max-width: 449px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+                .form-group{
+                    width: 20rem;
+                }
+                .ttt{
+                    width: 20em;
+                }
+
+            }
+
         </style>
     </head>
     <body>
@@ -124,6 +149,7 @@
                         <div class="card" >
 
                             <div class="card-block p-b-0">
+
                                 <div class="table-responsive">
                                     <table class="table table-hover table-bordered m-b-0" id="tbll">
                                         <thead>
@@ -157,51 +183,58 @@
                         <div class="card">
                             <div class="card-block p-b-0">
                                 <div class="card-header">
-                                    <div class="card-header-right">
-                                        <ul class="list-unstyled card-option">
-                                            <button type="button" class="close" id="closeButton2" data-dismiss="modal">&times;</button>
-                                        </ul>
-                                    </div>
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="feather icon-x cls-card"></i></li>
+                                    </ul>
                                 </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group"style="width: 75rem">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
                                         <label for="heading">Please Add Your Content Heading Here<span class="text-danger">*</span></label>
                                         <input id="heading" type="text" name="heading" class="form-control"  required autocomplete="off">
                                     </div>
                                 </div>
-                                <table class="table table-hover table-bordered m-b-0" id="tbladdAtt">
+                                <div class="col-lg-6 col-md-12">
 
-                                    <thead>
-                                        <tr>
-                                            <th>Dhamma Content Name</th>
-                                            <th>Dhamma Content Link</th>
-                                            <th style="width:1px;">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                    <div class="ttt" style="display: flex;flex-direction: row;">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered m-b-0" id="tbladdAtt" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Dhamma Content Name</th>
+                                                        <th>Dhamma Content Link</th>
+                                                        <th style="width:1px;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Your table body content goes here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
 
-                                    </tbody>
-
-                                </table>
-
-                                <div class="row justify-content-end" style="padding-top: 2em;">
-                                    <div class="col-lg-6 col-12">
-                                        <div class="text-right">
-                                            <button id="addBtn" class="btn btn-sm waves-effect waves-light btn-danger">
-                                                <i class="icon feather icon-plus"></i>Add Attachment
-                                            </button>
+                                    </div>
+                                    <div class="row justify-content-end" style="padding: 2em;">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="text">
+                                                <button id="addBtn" class="btn btn-sm waves-effect waves-light btn-danger">
+                                                    <i class="icon feather icon-plus"></i>Add Attachment
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
 
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
 
-                                        <div class="card-footer d-flex justify-content-end">
-                                            <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
-                                        </div>
+
+
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
+
+
+                                        <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
+
                                     </div> 
                                 </div>
                             </div>

@@ -5,6 +5,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>BVS | History</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +49,16 @@
                 opacity: 0.2;
                 z-index: -1;/* Adjust the opacity value as needed (0.0 to 1.0) */
             }
-
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+            }
 
         </style>
     </head>

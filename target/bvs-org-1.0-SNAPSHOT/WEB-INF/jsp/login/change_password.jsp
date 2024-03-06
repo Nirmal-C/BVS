@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BVS - Login</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="files/bootstrap/css/bootstrap.min.css">
@@ -13,6 +14,18 @@
         <link rel="icon" href="files/images/logo1.ico" type="images/x-icon">
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
+        <style>
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+            }
+        </style>
     </head>
     <body class="" style="background-color: #42a5f5;">
         <section class="login-block">

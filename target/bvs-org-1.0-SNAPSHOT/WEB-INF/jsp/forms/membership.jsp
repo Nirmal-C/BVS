@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BVS | Membership Form</title>
         <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -16,6 +16,7 @@
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
+
             .para {
                 font-family: 'Poppins', sans-serif;
                 font-size: 1rem;
@@ -49,6 +50,16 @@
                 background-position: center; /* Centers the image */
                 opacity: 0.2;
                 z-index: -1;/* Adjust the opacity value as needed (0.0 to 1.0) */
+            }
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
             }
         </style>
     </head>

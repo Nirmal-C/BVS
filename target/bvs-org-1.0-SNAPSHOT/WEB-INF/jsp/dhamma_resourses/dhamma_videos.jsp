@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BVS | Dhamma Videos</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,7 @@
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
+
             .para {
                 font-family: 'Poppins', sans-serif;
                 font-size: 1rem;
@@ -67,6 +69,26 @@
             .container-c {
                 display: none; /* Initially hide the container */
                 /* Add any styles you need for the new container */
+            }
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
             }
         </style>
     </head>
@@ -182,13 +204,14 @@
                                         '<h5>' + video.name + '</h5>' +
                                         '</div>' +
                                         '<div class="card-body text-secondary">' +
-                                        video.link +
+                                        '<div class="custom-iframe">' + video.link + '</div>' +
                                         '</div>' +
                                         '</div>' +
                                         '</div>';
 
                                 $('.container-c .row').append(card);
                             }
+
 
 
 

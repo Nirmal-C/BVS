@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Marvel:wght@700&display=swap"rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
@@ -24,14 +24,14 @@
         padding: 0;
     }
 
-    #logo-floater{
 
-        margin-right: 150px;
-        background-color: #000000;
+    img{
+        width:8rem;
 
     }
+
     .a{
-        text-decoration: none !important;
+        text-decoration: none;
         color: black;
         font-size: 1.1rem;
     }
@@ -49,22 +49,34 @@
     }
 
     .menu > ol {
-        list-style: none;
-        margin-top: 5px;
-        margin-right: 0px;
-        padding: 0;
-        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+
+        font-size: 0.9rem;
+        text-align: center;
+        margin-right: 4px;
+        margin-top: 15px;
 
     }
 
     .menu > ol > li {
+        font-size: 0.8rem;
+        width: 100%;
         color: #000000;
         background: darken(#000000, 75%);
-        border-left: 5px solid var(--gradient-color);
+
         margin-bottom: 1px;
         position:  relative;
         transition: 0.5s;
         text-transform: uppercase;
+
+
+        border-top: 5px solid var(--accent-color);
+        border-left: 0;
+        display: inline-block;
+        margin-left: -5px;
+        vertical-align: top;
+        width: 10rem;
     }
 
 
@@ -187,92 +199,169 @@
             width: 15px;
         }
     }
+    .menu > ol > li:hover .sub-menu,
+    .menu > ol > li:focus .sub-menu,
+    .menu > ol > li:focus-within .sub-menu {
+        max-height: 500px;
+    }
+
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        background: #944004;
+        padding: 15px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.2rem;
+
+    }
+
+    @media (min-width: 1200px) and (max-width: 1500px){
 
 
-
-
-    @media (min-width: 600px) {
-        a:focus,
-        a:hover {
-            position: relative;
-            &:after {
-                width: 100px;
-            }
+        body {
+            font-size: 0.9rem;
         }
 
-        a:after {
-            left: 0;
-            right: 0;
-            margin: auto;
-
-
-        }
-
-        .menu {
-
-            margin: 0;
-            margin-top: 0;
+        img{
+            width:8rem;
         }
 
         .menu > ol {
-
-            display: block;
-            max-width: none;
-            text-align: center;
-            margin-right: 4px;
-            margin-top: 15px;
-        }
-
-
-        #logo-floater{
-
-
-            padding: 0;
-            background-color: #000000;
+            margin-right: 0px;
 
         }
-
-
 
         .menu > ol > li {
-            border-top: 5px solid var(--accent-color);
-            border-left: 0;
-            display: inline-block;
-            margin-left: -5px;
-            vertical-align: top;
-            width: 150px;
+            font-size: 0.7rem;
+            width: 8rem;
         }
-
-        .menu > ol > li:hover,
-        .menu > ol > li:focus,
-        .menu > ol > li:focus-within {
-
-
-            .sub-menu {
-                max-height: 750px;
-            }
-        }
-
-        .menu > ol > li a:not(:last-child):before {
-            right: 12.5px;
-        }
-
-        .menu > ol > li:hover a {
-            &:before {
-                transform: rotate(-180deg);
-            }
-        }
-
-
 
     }
+
+
+    @media (min-width: 900px)  and (max-width: 1200px){
+
+
+        body {
+            font-size: 0.8rem;
+        }
+
+        img{
+            width:6rem;
+        }
+
+        .menu > ol {
+            margin-right: 2rem;
+
+        }
+
+        .menu > ol > li {
+            font-size: 0.7rem;
+            width: 7rem;
+        }
+
+    }
+
+
+
+    @media (min-width: 600px)  and (max-width: 900px){
+
+
+        body {
+            font-size: 0.8rem;
+        }
+
+        img{
+            width:5rem;
+        }
+
+        .menu > ol {
+            margin-right: 1rem;
+
+
+        }
+
+        .menu > ol > li {
+            font-size: 0.7rem;
+            width: 5rem;
+        }
+
+    }
+
+
 
     @media (max-width: 600px) {
-        .menu > ol > li {
-            width: 150px;
+
+        img{
+            width: 5rem;
+            margin-right: 4rem;
+            ;
+
         }
 
+        .menu > ol {
+            display: none;
+            ;
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            width: 100%;
+        }
+
+        .menu > ol > li {
+
+
+            width: 70%;
+            text-align: left;
+            border-top: 2px solid  var(--accent-color); /* Add a border between menu items */
+        }
+
+        .menu > ol > li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #ffffff;
+
+        }
+
+        .menu-toggle {
+            display: block;
+            padding: 15px;
+            text-align: center;
+            background: #944004;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu.open > ol {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .menu > ol > li .sub-menu {
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+
+            margin-left: 100%;
+            text-align: left; /* Add padding to visually separate sub-menu items */
+        }
+
+        .menu .sub-menu li {
+            z-index: 100;
+            width: 100%;
+            border-top: 1px solid #ccc;
+        }
+
+        .menu .sub-menu li a {
+            padding: 12px;
+        }
     }
+
+
 
     @keyframes rotateImg {
         0% {
@@ -284,7 +373,7 @@
     }
 
     #rotatingImg {
-        animation: rotateImg 10s linear infinite; /* Adjust the duration and timing function as needed */
+        animation: rotateImg 10s linear infinite;
     }
 
 
@@ -293,13 +382,14 @@
 <body class="html front not-logged-in no-sidebars page-node i18n-en">
 
     <nav class="menu">
+        <div class="menu-toggle" onclick="toggleMobileMenu()">☰ Menu</div>
         <div class="img">
             <a href="home" title="home">
-                <img src="https://bvs.org/sites/default/files/logo_0.png" style="width: 80%;margin-top: 1rem;" alt="Home" />
+                <img src="https://bvs.org/sites/default/files/logo_0.png" style="margin-top: 1rem; margin-bottom: 1rem;" alt="Home" />
             </a> 
         </div>
 
-        <ol>
+        <ol class="nav-ol">
             <li class="menu-item"><a href="home">Home</a></li>
 
             <li class="menu-item">
@@ -313,7 +403,7 @@
                     <li class="menu-item"><a href="Board-Directors">Board of Directors</a></li>
                     <li class="menu-item"><a href="Religious-Advisors">Religious Advisors</a></li>
                     <li class="menu-item"><a href="Audit-Committee">Audit Committee</a></li>
-
+                    <!--<li class="menu-item"><a href="projects" title="projects">Projects</a></li>-->
                 </ol>
             </li>
 
@@ -352,7 +442,7 @@
                 <ol class="sub-menu">
                     <li class="menu-item"><a href="Dana-Calender">Dana Calendar</a></li>
                     <li class="menu-item"><a href="Event-Calender">Events Calendar</a></li>
-
+                    <!--<li class="menu-item"><a href="#">Special Events</a></li>-->
                 </ol>
             </li>
 
@@ -367,10 +457,25 @@
     </nav>
 
     <script>
+        function toggleMobileMenu() {
+            const menuToggle = document.querySelector('.menu');
+            const iconToggle = document.querySelector(".img");
+            const imgdammaToggle = document.querySelector(".img-damma");
 
+            menuToggle.classList.toggle('open');
 
+            if (iconToggle.style.display === 'none') {
+                iconToggle.style.display = 'block';
+                imgdammaToggle.style.display = 'block';
 
+            } else {
+                iconToggle.style.display = 'none';
+                imgdammaToggle.style.display = 'none';
+
+            }
+        }
     </script>
+
     <script>
         fetch('form/details')
                 .then(response => response.json())

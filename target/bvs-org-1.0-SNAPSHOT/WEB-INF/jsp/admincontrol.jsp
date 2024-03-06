@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">        
         <link href="assets/css/style_kasun.css" rel="stylesheet">
@@ -20,6 +21,7 @@
     <body>
         <%@include file="jspf/nav.jspf" %>
         <style>
+
             .pagetitle {
                 margin-bottom: 10px;
                 margin-top: -37px;

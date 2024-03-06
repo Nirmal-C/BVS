@@ -5,6 +5,7 @@
 
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <title>BVS</title>
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico"
@@ -17,6 +18,7 @@
         <%@include file="jspf/navbar.jspf" %>
 
         <style>
+
             .a{
                 style: unset !important;
                 text-decoration: none !important;
@@ -115,7 +117,16 @@
             }
 
 
-
+            @media only screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+            }
         </style>
 
 

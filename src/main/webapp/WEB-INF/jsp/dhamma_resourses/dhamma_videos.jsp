@@ -90,6 +90,36 @@
                     padding-left: 1em;
                 }
             }
+            /* For desktop */
+            @media (min-width: 768px) {
+                .custom-iframe {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width * 100%) */
+                }
+
+                .custom-iframe iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .col-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+
+            /* For mobile */
+            @media (max-width: 767px) {
+                .col-6 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -194,23 +224,45 @@
                             }
 
                             // Loop through the videos array
+//                            for (var i = 0; i < data.videos.length; i++) {
+//                                var video = data.videos[i];
+//
+//                                // Create the card HTML with the embedded video
+//                                var card = '<div class="col-6" style="margin-top: 1rem;">' +
+//                                        '<div class="card border-secondary">' +
+//                                        '<div class="card-header">' +
+//                                        '<h5>' + video.name + '</h5>' +
+//                                        '</div>' +
+//                                        '<div class="card-body text-secondary">' +
+//                                        '<div class="custom-iframe" style="height: auto;">' + video.link + '</div>' +
+//                                        '</div>' +
+//                                        '</div>' +
+//                                        '</div>';
+//
+//                                $('.container-c .row').append(card);
+//                            }
                             for (var i = 0; i < data.videos.length; i++) {
                                 var video = data.videos[i];
 
+                                // Remove height and width attributes from the iframe tag
+                                var iframeWithoutDimensions = video.link.replace(/(height|width)="[\d]*"/gi, '');
+
                                 // Create the card HTML with the embedded video
-                                var card = '<div class="col-6" style="margin-top: 1rem;">' +
+                                var card = '<div class="col-6 col-sm-12" style="margin-top: 1rem;">' +
                                         '<div class="card border-secondary">' +
                                         '<div class="card-header">' +
                                         '<h5>' + video.name + '</h5>' +
                                         '</div>' +
                                         '<div class="card-body text-secondary">' +
-                                        '<div class="custom-iframe">' + video.link + '</div>' +
+                                        '<div class="custom-iframe">' + iframeWithoutDimensions + '</div>' +
                                         '</div>' +
                                         '</div>' +
                                         '</div>';
 
                                 $('.container-c .row').append(card);
                             }
+
+
 
 
 

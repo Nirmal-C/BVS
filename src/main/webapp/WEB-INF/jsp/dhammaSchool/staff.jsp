@@ -92,6 +92,7 @@
                 .container-s {
                     padding-left: 1em;
                 }
+
             }
         </style>
     </head>
@@ -123,23 +124,24 @@
             </p>
 
             <div class="card" style="padding: 0.5rem; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);border-radius: 10px;">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-
-                            <th scope="col">Grade</th>
-                            <th scope="col">Teacher(s)</th>
-                            <th scope="col">Substitute Teacher(s)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                        <tr>
-
-                        </tr>
-
-                    </tbody>
-                </table>  
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Grade</th>
+                                <th scope="col">Teacher(s)</th>
+                                <th scope="col">Substitute Teacher(s)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <!-- Your table data goes here -->
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>
             </div>
+
 
         </div>
 

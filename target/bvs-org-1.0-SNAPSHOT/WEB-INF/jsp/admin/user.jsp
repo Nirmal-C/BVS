@@ -171,7 +171,7 @@
 
                                 <div class="col-lg-6 col-12">
                                     <div class="form-group" style="width: 75rem">
-                                        <label for="name">Please Enter the User;s Name Here<span class="text-danger">*</span></label>
+                                        <label for="name">Please Enter the User's Name Here<span class="text-danger">*</span></label>
                                         <input id="name" type="text" name="name" class="form-control"  required autocomplete="off">
                                     </div>
                                 </div>
@@ -403,28 +403,67 @@
                 });
             }
 
-            $('#saveBtn').click(function () {
-                // Prepare the data to send in the request body
+// Function for saving a user
+            function saveUser() {
+                // Disable the saveBtn
+                $('#saveBtn').prop('disabled', true);
+
                 var userData = {
-                    id: $('#saveBtn').data('id'),
                     name: $('#name').val(),
                     username: $('#username').val(),
                     email: $('#email').val()
                 };
 
-                // Send the fetch request
-                fetch((($('#saveBtn').data('mode') === 'save') ? 'user/save-user' : 'user/update-user'), {
+                fetch('user/save-user', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json' // Set the Content-Type header to indicate JSON data
+                        'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(userData) // Convert the data object to JSON format
+                    body: JSON.stringify(userData)
                 })
                         .then(response => {
                             if (!response.ok) {
                                 throw new Error(response.statusText);
                             } else {
-                                Swal.fire('Successfull!', 'User has been successfully saved');
+                                return response.json();
+                            }
+                        })
+                        .then(data => {
+                            // Enable the saveBtn
+                            $('#saveBtn').prop('disabled', false);
+
+                            console.error('Error:', error);
+                            Swal.fire('Error!', 'An error occurred while saving the user', 'error');
+
+                        })
+                        .catch(error => {
+                            Swal.fire('Successful!', 'User has been successfully saved', 'success');
+                            clearForm();
+                            $('#formSection').hide();
+                            $('#tableSection').fadeIn();
+                            dtable.ajax.reload();
+                            // Enable the saveBtn in case of error
+                            $('#saveBtn').prop('disabled', false);
+                        });
+            }
+
+
+// Function for updating a user
+            function updateUser() {
+                return fetch('user/update-user', {
+                    method: 'POST',
+                    body: new URLSearchParams({
+                        id: $('#saveBtn').data('id'),
+                        name: document.getElementById('name').value,
+                        username: document.getElementById('username').value,
+                        email: document.getElementById('email').value,
+                    })
+                })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            } else {
+                                Swal.fire('Successful!', 'User has been successfully updated', 'success');
                                 clearForm();
                                 $('#formSection').hide();
                                 $('#tableSection').fadeIn();
@@ -433,41 +472,28 @@
                             return response.json();
                         })
                         .catch(error => {
-                            // Handle error
                             console.error('Error:', error);
+                            Swal.fire('Error!', 'An error occurred while updating the user', 'error');
                         });
+            }
+
+
+
+            $('#saveBtn').click(function () {
+                var mode = $(this).data('mode'); // Get the mode from the data attribute of the button
+
+                if (mode === 'save') {
+                    saveUser(); // Call saveUser function if mode is 'save'
+                } else if (mode === 'update') {
+                    updateUser(); // Call updateUser function if mode is 'update'
+                } else {
+                    console.error('Invalid mode specified.');
+                }
             });
 
 
 
 
-
-
-
-
-//            $('#saveBtn').click(function () {
-//
-//                return fetch((($('#saveBtn').data('mode') === 'save') ? 'user/save-user' : 'user/update-user'), {
-//                    method: 'POST',
-//                    body: new URLSearchParams({
-//                        id: $('#saveBtn').data('id'),
-//                        name: document.getElementById('name').value,
-//                        username: document.getElementById('username').value,
-//                        email: document.getElementById('email').value,
-//                    })
-//                }).then(response => {
-//                    if (!response.ok) {
-//                        throw new Error(response.statusText);
-//                    } else {
-//                        Swal.fire('Successfull!', 'User has been successfully saved');
-//                        clearForm();
-//                        $('#formSection').hide();
-//                        $('#tableSection').fadeIn();
-//                        dtable.ajax.reload();
-//                    }
-//                    return response.json();
-//                });
-//            });
 
             $.fn.dataTable.Debounce = function (table) {
                 var tableId = table.settings()[0].sTableId;
@@ -493,29 +519,7 @@
 
 
 
-//            document.getElementById('save_whistle_btn').addEventListener('click', function () {
-//
-//                var whistleDescription = document.getElementById('whistle_field').value;
-//
-//
-//                var employeeName = document.getElementById('emp_namewi').innerText;
-//                var department = document.getElementById('departmentwi').innerText;
-//
-//
-//                $.ajax({
-//                    type: 'POST',
-//                    url: 'whistle/submitWhistle',
-//                    contentType: 'application/json',
-//                    data: JSON.stringify({
-//                        employeeName: employeeName,
-//                        department: department,
-//                        whistleDescription: whistleDescription
-//                    }),
-//                    success: function (response) {
-//                        alert(response);
-//                    }
-//                });
-//            });
+
         </script>
     </body>
 </html>

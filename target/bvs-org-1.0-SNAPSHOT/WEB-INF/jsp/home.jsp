@@ -175,7 +175,7 @@
                                             <h3>
                                                 <img alt="" src="assets/img/garden.png"
                                                      style="float:left; height:auto; margin-left:0px; margin-right:20px; width:12%" />Town
-                                                Hall Meeting - BVS Garden Beautification Project
+                                                Hall Meeting - BVS Garden  Project
                                             </h3>
                                             <p>We concluded a successful town hall meeting via Zoom on Saturday, the 19th December 2020
                                                 from 6:00 pm to 7:00 pm and received very valuable comments and suggestions.We still would like to receive your valuable comments and suggestions on this project</p>

@@ -18,14 +18,24 @@
         <style>
 
             .para {
-                font-family: 'Poppins', sans-serif;
-                font-size: 1rem;
-                padding-left: 15em;
-                padding-right: 15em;
-                text-align: justify;
-                padding-top: 2em;
-                padding-bottom: 2em;
+                /* Your existing styles */
+                /* Add this style to make the iframe responsive */
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio (height: 9/16 = 0.5625) */
+                height: 0;
+                overflow: hidden;
             }
+
+            .responsive-iframe {
+                /* Your existing styles */
+                /* Add this style to make the iframe responsive */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
             .container-s {
                 background-color: #E5E5E5;
                 padding-left: 20em;
@@ -97,7 +107,10 @@
 
                 Please note that your payment for vegetables is by donation only. You can donate cash or do an e-transfer to treasurer@bvs.org
             </p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdN9WFjxh-_o73GYb0ZVzWRS6MDPjQkY_PzWeHqwowinTJ-fg/viewform?embedded=true" width="940" height="1648" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <div class="para">
+            <!-- Your paragraph content here -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdN9WFjxh-_o73GYb0ZVzWRS6MDPjQkY_PzWeHqwowinTJ-fg/viewform?embedded=true" class="responsive-iframe" frameborder="0">Loading…</iframe>
         </div>
 
         <%@include file="../jspf/footer.jspf" %>

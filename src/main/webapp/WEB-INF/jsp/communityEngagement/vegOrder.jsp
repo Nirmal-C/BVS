@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,34 +5,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BVS | Vegetable Ordering</title>
-        <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
-
             .para {
-                /* Your existing styles */
-                /* Add this style to make the iframe responsive */
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+                padding: 2em 15em; /* Adjust padding */
+                text-align: justify;
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 aspect ratio (height: 9/16 = 0.5625) */
-                height: 0;
-                overflow: hidden;
             }
 
             .responsive-iframe {
-                /* Your existing styles */
-                /* Add this style to make the iframe responsive */
-                position: absolute;
-                top: 0;
-                left: 0;
+                position: relative;
                 width: 100%;
-                height: 100%;
+                height: 100vh; /* Adjust the height as needed */
             }
+
 
             .container-s {
                 background-color: #E5E5E5;
@@ -43,12 +34,13 @@
                 padding-bottom: 0.1em;
                 font-family: 'Merriweather', serif;
                 color: #1968B1;
-
             }
+
             .title {
                 font-size: 2rem;
                 margin: 0; /* Remove any default margins */
             }
+
             .background-image {
                 position: fixed;
                 top: 0;
@@ -59,14 +51,13 @@
                 background-size: cover; /* Ensures the image covers the entire background */
                 background-position: center; /* Centers the image */
                 opacity: 0.2;
-                z-index: -1;/* Adjust the opacity value as needed (0.0 to 1.0) */
+                z-index: -1; /* Adjust the opacity value as needed (0.0 to 1.0) */
             }
 
             @media only screen and (max-width: 768px) {
                 /* Adjust styles for smaller screens */
                 .para {
-                    padding-left: 1em;
-                    padding-right: 1em;
+                    padding: 2em 1em; /* Adjust padding for smaller screens */
                 }
                 .container-s {
                     padding-left: 1em;
@@ -85,7 +76,6 @@
                     </div>
                 </div> 
             </div>
-
         </div>
         <div class="background-image"></div>
         <div class="para" >
@@ -93,7 +83,7 @@
                 Please place your request for vegetable boxes and vegetable here before 6pm on the day prior to the expected collection/delivery day 
             </p>
             <p>
-                We have following vegetables available for coming Saturday and Sunda starting from 11am on both days.<br>
+                We have following vegetables available for coming Saturday and Sunday starting from 11am on both days.<br>
 
                 A vegetable box with following six vegetables will be available and the weight of the box will be 1kg approx.
             </p>
@@ -126,5 +116,3 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     </body>
 </html>
-
-

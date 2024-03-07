@@ -16,7 +16,22 @@
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
-
+            #formIframe {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                overflow: hidden;
+                position: relative;
+                padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            }
+            #formIframe iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
             .para {
                 font-family: 'Poppins', sans-serif;
                 font-size: 1rem;
@@ -105,8 +120,12 @@
                     .then(data => {
                         // Set form name in the title
                         document.getElementById('formName').innerText = data.name;
+
+                        // Remove width and height attributes from the iframe tag
+                        var iframeWithoutDimensions = data.iframe.replace(/(width|height)="[\d]*"/gi, '');
+
                         // Set iframe src
-                        document.getElementById('formIframe').innerHTML = data.iframe;
+                        document.getElementById('formIframe').innerHTML = iframeWithoutDimensions;
                     })
                     .catch(error => console.error('Error fetching form details:', error));
         </script>

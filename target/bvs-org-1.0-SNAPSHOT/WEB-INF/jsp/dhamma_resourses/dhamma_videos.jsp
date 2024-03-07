@@ -13,8 +13,16 @@
               crossorigin="anonymous">
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
         <style>
-
+            h2{
+                font-family: "Arapey", serif;
+            }
+            h5{
+                font-family: "Arapey", serif;
+            }
             .para {
                 font-family: 'Poppins', sans-serif;
                 font-size: 1rem;

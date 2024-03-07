@@ -154,7 +154,8 @@
                                 <div class="region region-home-area-2-left">
                                     <div id="block-block-32" class="block block-block">
                                         <div class="content">
-                                            <h3><img  alt="" src="assets/img/covid.png" style="float:left; width: 15%;height: auto; margin-left:0px; margin-right:10px; " />BVS
+                                            <h3>
+                                                <img  alt="" src="assets/img/covid.png" style="float:left; width: 15%;height: auto; margin-left:0px; margin-right:10px; " />BVS
                                                 Health and Safety protocols for COVID - 19</h3>
                                             <p>Under the BC disease control, guidelines we have all had to make significant behavioral
                                                 changes, and new safety procedures to reduce the spread of COVID-19. Hence all the BVS
@@ -194,21 +195,15 @@
                                 <a href="Dana-Calender">
                                     <div class="region region-home-area-2">
                                         <div id="block-block-13" class="block block-block">
-                                            <div class="content">
-                                                <div class="home-links">
-                                                    <div class="dana-link content">
-                                                        <h3>
-                                                            <img src="assets/img/calendar.png" name="Image3" style="width: 20%;height: auto;" border="0">
-                                                            Dana Calendar
-                                                        </h3>
-                                                        <p>All dana sponsors are kindly reminded to confirm your
-                                                            dana arrangement two days (2) prior to the dana date by
-                                                            calling the temple at 604.888.1162.
-                                                        </p>
-
-                                                    </div>
-
-                                                </div>
+                                            <div class="content">                                                                                           
+                                                <h3>
+                                                    <img src="assets/img/calendar.png" name="Image3" style="width: 20%;height: auto;float:left;" border="0">
+                                                    Dana Calendar
+                                                </h3>
+                                                <p>All dana sponsors are kindly reminded to confirm your
+                                                    dana arrangement two days (2) prior to the dana date by
+                                                    calling the temple at 604.888.1162.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -229,7 +224,7 @@
                                             <div class="home-links">
                                                 <div class="dana-link content">
                                                     <h3>
-                                                        <img src="assets/img/support.png" name="Image2" style="width: 20%;height: auto;" border="0">
+                                                        <img src="assets/img/support.png" name="Image2" style="width: 20%;height: auto;float:left;" border="0">
                                                         <a href="Support-Us">Support Us</a></h3>
                                                     <p>We request that anyone who requires the services of our
                                                         society become a member. In order to become a member,

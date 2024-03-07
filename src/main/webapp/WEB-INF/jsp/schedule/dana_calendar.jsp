@@ -95,15 +95,11 @@
 
         </div>
         <div class="background-image"></div>
-        <!--        <div class="para">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=9c59283d3cb452d406c7682f8d5f53f96f367b193cc660d4404a052a55b33386%40group.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" class="responsive-iframe" frameborder="0" scrolling="no"></iframe>
-                </div>-->
-
-        <div class="para" >
-            <iframe src="https://calendar.google.com/calendar/embed?src=2c60c51ad932efecd88b704243a08e30c71b3fbc1fc3086565640dbce67dedd1%40group.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" class="responsive-iframe" frameborder="0" scrolling="no"></iframe>
-
-
+        <div class="para">
+            <iframe src="https://calendar.google.com/calendar/embed?src=9c59283d3cb452d406c7682f8d5f53f96f367b193cc660d4404a052a55b33386%40group.calendar.google.com&ctz=Asia%2FColombo" style="border: 0" class="responsive-iframe" frameborder="0" scrolling="no"></iframe>
         </div>
+
+
         <%@include file="../jspf/footer.jspf" %>
         <%@include file="../jspf/scripts.jspf" %>
         <script type="text/javascript" src="files/js/slimselect.js"></script>

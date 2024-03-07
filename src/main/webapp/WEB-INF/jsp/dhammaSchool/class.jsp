@@ -15,9 +15,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
 
-            .a,ul,li{
-                text-decoration: none;
+            a {
+                color: black; /* Set font color to black */
+                text-decoration: none; /* Remove underline */
             }
+
             .para {
                 font-family: 'Poppins', sans-serif;
                 font-size: 1rem;

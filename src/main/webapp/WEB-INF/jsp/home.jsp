@@ -19,11 +19,11 @@
 
         <style>
 
-            .a{
-                style: unset !important;
-                text-decoration: none !important;
-
+            a {
+                color: black; /* Set font color to black */
+                text-decoration: none; /* Remove underline */
             }
+
 
 
             .container_12 {
@@ -230,8 +230,8 @@
                                                             <h3><a href="Support-Us">Support Us</a></h3>
                                                             <p>We request that anyone who requires the services of our
                                                                 society become a member. In order to become a member,
-                                                                please <a href="Membership"
-                                                                          target="_blank">register</a></p>
+                                                                please <a href="Membership"  target="_blank">register</a>
+                                                            </p>
                                                         </div>
                                                     </div>
 

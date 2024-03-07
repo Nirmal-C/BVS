@@ -16,6 +16,10 @@
         <link rel="shortcut icon" href="https://bvs.org/sites/all/themes/bluemasters/favicon.ico" type="image/vnd.microsoft.icon" />
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <style>
+            a {
+                color: black; /* Set font color to black */
+                text-decoration: none; /* Remove underline */
+            }
 
             .para {
                 font-family: 'Poppins', sans-serif;

@@ -82,18 +82,9 @@
         </div>
         <div class="background-image"></div>
         <div class="para" >
-            <p style="color: #666666;font-size: 1.3rem;font-weight: 600;">
-                Audit Committee  (2020-2022)
+            <p id="team-text" style="color: #666666;font-size: 1.3rem;font-weight: 600;">
             </p>
-
-            <ul>
-                <li>Janaka Sandasoma</li>  
-                <li>Buddhika Sampath Egodawatta</li>
-                <li>Kanchana Wickramaratna</li>
-
-            </ul>
-
-
+            <div id="list-container"></div>
         </div>
 
         <%@include file="../jspf/footer.jspf" %>
@@ -107,6 +98,37 @@
         <script type="text/javascript" src="files/js/jquery.highlight.js"></script>
         <script type="text/javascript" src="files/js/dataTables.searchHighlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+            fetch('team/attach-content')
+                    .then(response => response.json())
+                    .then(data => {
+                        const filteredItem = data.find(item => item.id === 4);
+                        if (filteredItem) {
+                            const teamText = document.getElementById('team-text');
+                            teamText.textContent = filteredItem.team;
+
+                            fetch('team/' + filteredItem.id)
+                                    .then(res => res.json())
+                                    .then(res => res.data)
+                                    .then(data => {
+                                        const listContainer = document.getElementById('list-container');
+                                        const ul = document.createElement('ul');
+
+                                        if (Array.isArray(data.members)) {
+                                            data.members.forEach(member => {
+                                                const li = document.createElement('li');
+                                                li.textContent = member.name;
+                                                ul.appendChild(li);
+                                            });
+                                        }
+                                        listContainer.appendChild(ul);
+                                    })
+                                    .catch(error => console.error('Error fetching team data:', error));
+                        }
+                    })
+                    .catch(error => console.error('Error fetching team list:', error));
+
+        </script>
     </body>
 </html>
 

@@ -14,11 +14,50 @@
     footer{
         position: absolute;
         width: 100%;
-
+        /* Add some padding to the footer */
+        color: #fff; /* Set text color to white */
+        font-size: 14px;
     }
+
     #goog-gt-tt,.VIpgJd-ZVi9od-ORHb,.skiptranslate   {
         display: none !important;
     }
+
+    .contact-icon {
+        margin-bottom: 20px;
+    }
+
+    .contact-area {
+        padding: 30px;
+    }
+    .contact-icon i {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .contact-icon p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Style the footer bottom area */
+    .footer-area-bottom {
+        bottom: 0;
+        padding: 20px 0;
+    }
+
+    /* Center align text in the footer */
+    .text-center {
+        text-align:center;
+    }
+
+    /* Style the copyright text */
+    .copyright {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+
 
 </style>
 <footer>
@@ -33,10 +72,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 1rem">
+                <div class="row" >
                     <!-- Start contact icon column -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="contact-icon text-center">
+                        <div class="contact-icon">
                             <div class="single-icon">
                                 <i class="fa fa-mobile"></i>
                                 <p style="font-size: medium">
@@ -49,7 +88,7 @@
                     </div>
                     <!-- Start contact icon column -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="contact-icon text-center">
+                        <div class="contact-icon">
                             <div class="single-icon">
                                 <i class="fa fa-envelope-o"></i>
                                 <p style="font-size: medium"> 

@@ -76,30 +76,10 @@
 
         </div>
         <div class="background-image"></div>
-        <div class="para">
-            <p style="color: #666666;font-size: 1.3rem;font-weight: 600;">
-                Board of Directors  (2020-2022)
+        <div class="para" >
+            <p id="team-text" style="color: #666666;font-size: 1.3rem;font-weight: 600;">
             </p>
-
-            <ul>
-                <li>Ven. Kumbalgoda Siriniwāsa (President)</li>  
-                <li>Dr Aruna Somasiri (Vice President)</li>
-                <li>Ariyaratne Tennakoon (Secretary)</li>
-                <li>Madhava Amarasinghe (Asst.Secretary)</li>
-                <li>Vishwanath Kumar (Treasurer)</li>
-                <li>Eraj Liyanage (Asst.Treasurer)</li>
-                <li>Pradeepa Weeraratne (Director)</li>
-                <li>Kumar Basnayake (Director)</li>
-                <li>Viraj Opananda (Director)</li>
-                <li>Nirosha Amarasingha (Director)</li>
-                <li>Thusitha Madawanaarachchi (Director)</li>
-                <li>Chandana Kariyapperuma (Director)</li>
-                <li>Nayana Hewage (Director)</li>
-                <li>Kavindya Peiris (Director)</li>
-                <li>Esanka Fernando (Director)</li>
-            </ul>
-
-
+            <div id="list-container"></div>
         </div>
 
         <%@include file="../jspf/footer.jspf" %>
@@ -113,6 +93,37 @@
         <script type="text/javascript" src="files/js/jquery.highlight.js"></script>
         <script type="text/javascript" src="files/js/dataTables.searchHighlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+            fetch('team/attach-content')
+                    .then(response => response.json())
+                    .then(data => {
+                        const filteredItem = data.find(item => item.id === 2);
+                        if (filteredItem) {
+                            const teamText = document.getElementById('team-text');
+                            teamText.textContent = filteredItem.team;
+
+                            fetch('team/' + filteredItem.id)
+                                    .then(res => res.json())
+                                    .then(res => res.data)
+                                    .then(data => {
+                                        const listContainer = document.getElementById('list-container');
+                                        const ul = document.createElement('ul');
+
+                                        if (Array.isArray(data.members)) {
+                                            data.members.forEach(member => {
+                                                const li = document.createElement('li');
+                                                li.textContent = member.name;
+                                                ul.appendChild(li);
+                                            });
+                                        }
+                                        listContainer.appendChild(ul);
+                                    })
+                                    .catch(error => console.error('Error fetching team data:', error));
+                        }
+                    })
+                    .catch(error => console.error('Error fetching team list:', error));
+
+        </script>
     </body>
 </html>
 

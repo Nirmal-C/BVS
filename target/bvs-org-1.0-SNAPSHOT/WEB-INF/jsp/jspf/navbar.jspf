@@ -93,7 +93,8 @@
     }
 
     .menu > ol > li:nth-child(4) {
-        --accent-color: #ffffff;
+        --accent-color: #000000;
+        border-top: 5px solid white;
     }
 
     .menu > ol > li:nth-child(4):hover {
@@ -129,7 +130,7 @@
     .menu > ol > li:hover,
     .menu > ol > li:focus,
     .menu > ol > li:focus-within {
-        z-index: 1;
+        z-index: 999;
     }
 
     .menu > ol > li:hover:after,
@@ -137,14 +138,24 @@
     .menu > ol > li:focus-within:after {
         background: var(--accent-color);
         max-width: 800px;
+
     }
 
     .menu > ol > li:focus,
     .menu > ol > li:focus-within {
         .sub-menu {
             max-height: 500px;
+            z-index: 999;
         }
 
+    }
+
+    .sub-menu {
+        position: absolute;
+        top: 100%; /* Position the submenu below the parent menu item */
+        left: 0;
+
+        z-index: 999; /* Set a higher z-index for the submenu */
     }
 
     .menu > ol > li:after {
@@ -159,7 +170,9 @@
         max-width: 0;
         overflow: hidden;
     }
-
+    .menu-item:hover .sub-menu {
+        display: block;
+    }
 
     .menu > ol > li .sub-menu {
         background-color: var(--accent-color);
@@ -300,7 +313,6 @@
 
         .menu > ol {
             display: none;
-
             list-style: none;
             padding: 0;
             margin-top: 1rem;
@@ -311,14 +323,19 @@
         .menu > ol > li {
 
 
-            width: 50%;
+            width: 70%;
             text-align: left;
             border-top: 2px solid  var(--accent-color); /* Add a border between menu items */
         }
 
+        .menu > ol > li:nth-child(4) {
+            --accent-color: #000000;
+            border-top: 2px solid white;
+        }
+
         .menu > ol > li a {
             display: block;
-            padding: 10px;
+            padding: 15px;
             text-decoration: none;
             color: #ffffff;
 

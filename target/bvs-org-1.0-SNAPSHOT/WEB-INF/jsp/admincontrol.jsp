@@ -160,6 +160,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-6 "style="width: 25rem;margin-top: 1rem;">
+                            <div class="card" style="height: 12rem">
+                                <div class="card-body">
+                                    <h5 class="card-header">Update Team Members</h5> 
+                                    <p class="card-text">Update Team Members,Please go through below button</p>
+                                    <button class="btn btn-primary updateButton" data-target="team" style="position: absolute;bottom: 1rem">Update Team Members</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -208,6 +217,9 @@
                             break;
                         case 'letter':
                             window.location.href = 'Admin-NewsLetters';
+                            break;
+                        case 'team':
+                            window.location.href = 'Admin-OurTeam';
                             break;
 
                         default:

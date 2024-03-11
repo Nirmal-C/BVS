@@ -189,4 +189,9 @@ public class PageController {
     public String newsAdd() {
         return "admin/add_newsLetter";
     }
+
+    @GetMapping("/Admin-OurTeam")
+    public String teamAdd() {
+        return "admin/add_team";
+    }
 }

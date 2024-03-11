@@ -231,24 +231,6 @@
                                 $('.container-c').prepend(titleBg);
                             }
 
-                            // Loop through the videos array
-//                            for (var i = 0; i < data.videos.length; i++) {
-//                                var video = data.videos[i];
-//
-//                                // Create the card HTML with the embedded video
-//                                var card = '<div class="col-6" style="margin-top: 1rem;">' +
-//                                        '<div class="card border-secondary">' +
-//                                        '<div class="card-header">' +
-//                                        '<h5>' + video.name + '</h5>' +
-//                                        '</div>' +
-//                                        '<div class="card-body text-secondary">' +
-//                                        '<div class="custom-iframe" style="height: auto;">' + video.link + '</div>' +
-//                                        '</div>' +
-//                                        '</div>' +
-//                                        '</div>';
-//
-//                                $('.container-c .row').append(card);
-//                            }
                             for (var i = 0; i < data.videos.length; i++) {
                                 var video = data.videos[i];
 

@@ -50,10 +50,10 @@
                 box-sizing: border-box;
             }
 
-            .covid-image{
-                width:100px;
-                height:100px;
-            }
+            /*            .covid-image{
+                            width:100px;
+                            height:100px;
+                        }*/
             .alpha {
                 margin-left: 0;
             }
@@ -77,6 +77,7 @@
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
                 transition: box-shadow 0.3s ease;
+                height: 10rem;
             }
 
             .home-block-area:hover {
@@ -136,6 +137,9 @@
                 }
                 .container-s {
                     padding-left: 1em;
+                }
+                .home-block-area {
+                    height: auto;
                 }
             }
         </style>

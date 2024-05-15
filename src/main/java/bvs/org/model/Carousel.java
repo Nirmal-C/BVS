@@ -16,36 +16,35 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.jdbc.core.mapping.AggregateReference;
 import org.springframework.data.relational.core.mapping.Table;
 
+/**
+ *
+ * @author cpm.999cc
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
 @ToString
-@Table("users")
-public class User {
+@Table("syllabus")
+public class Carousel {
 
     @Id
     private Integer id;
-    private String name;
-    private String username;
-    private String usertype;
-    private String password;
-    private String email;
-    private String status;
-
-    @CreatedBy
-    private Integer ent_by;
+    private String heading;
+    private String para;
+    private String path;
     @CreatedDate
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private Date ent_on;
+    @CreatedBy
+    private Integer ent_by;
     @LastModifiedBy
     private Integer mod_by;
     @LastModifiedDate
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private Date mod_on;
+    private String status;
 
 }

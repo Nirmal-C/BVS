@@ -1,9 +1,3 @@
-<%-- 
-    Document   : user
-    Created on : 29 Feb 2024, 7:53:10 am
-    Author     : Chirantha Prasad
---%>
-
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>BVS | Users</title>
+        <title>BVS | Dhamma Carousel</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
@@ -104,6 +98,22 @@
                     padding-left: 1em;
                 }
             }
+
+            @media only screen and (max-width: 449px) {
+                /* Adjust styles for smaller screens */
+                .para {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                .container-s {
+                    padding-left: 1em;
+                }
+                .form-group{
+                    width: 20rem;
+                }
+
+
+            }
         </style>
     </head>
     <body>
@@ -119,7 +129,7 @@
                             <div class="container-s">
                                 <div class="container_12">
                                     <div class="grid_12">
-                                        <h1 class="title">Users - Admin</h1>
+                                        <h1 class="title">Dhamma Carousel - Admin</h1>
                                     </div>
                                 </div> 
                             </div>
@@ -132,8 +142,9 @@
                                     <table class="table table-hover table-bordered m-b-0" id="tbll">
                                         <thead>
                                             <tr>
+
                                                 <th>Id</th>
-                                                <th>Name</th> 
+                                                <th>Grade</th>
                                                 <th>Entered On</th>
                                                 <th>Entered By</th>
                                                 <th>Mod On</th>
@@ -150,63 +161,59 @@
                             </div>
                             <div class="card-footer">
                                 <div class="text-right">
-                                    <button id="addUserBtn" class="btn btn-sm waves-effect waves-light btn-danger"><i class="icon feather icon-plus"></i>Add User</button>
+                                    <button id="addCarouselBtn" class="btn btn-sm waves-effect waves-light btn-danger"><i class="icon feather icon-plus"></i>Add Syllabus</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
-
                     <div class="" id="formSection" style="display: none">
                         <div class="card">
                             <div class="card-block p-b-0">
                                 <div class="card-header">
-                                    <div class="card-header-right">
+                                    <div class="card-header-left">
                                         <ul class="list-unstyled card-option">
-                                            <li><i class="feather icon-x cls-card"></i></li>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
-                                        <label for="name">Please Enter the User's Name Here<span class="text-danger">*</span></label>
-                                        <input id="name" type="text" name="name" class="form-control"  required autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
-                                        <label for="username">Please Enter the User's username Here<span class="text-danger">*</span></label>
-                                        <input id="username" type="text" name="username" class="form-control"  required autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
-                                        <label for="email">Please Enter the Users's email Here<span class="text-danger">*</span></label>
-                                        <input id="email" type="text" name="email" class="form-control"  required autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <label for="user_type">User Type<span class="text-danger">*</span></label>
-                                        <select id="usertype" name="user_type" class="" required autocomplete="off">
-                                        </select>
+                                        <label for="heading">Please Enter Heading Here<span class="text-danger">*</span></label>
+                                        <input id="heading" type="text" name="heading" class="form-control"  required autocomplete="off">
                                     </div>
-                                </div> 
-                                <div class="col-lg-6 col-12">
-                                    <div class="form-group" style="width: 75rem">
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <label for="heading">Please Enter Content Here<span class="text-danger">*</span></label>
+                                        <input id="para" type="text" name="para" class="form-control"  required autocomplete="off">
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group" >
+                                        <label for="file">Upload Your File Here<span class="text-danger">*</span></label>
+                                        <input id="file" type="file" >
                                         <div class="card-footer d-flex justify-content-end">
                                             <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
                                         </div>
-                                    </div> 
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    </div>
 
+
+
+                                    <div class="col-lg-6 col-md-12 ">
+
+                                    </div> 
+                                </div>
+                            </div>
+                        </div></div>
+                </div>
+
+            </div>
         </div>
 
 
@@ -225,7 +232,6 @@
         <script>
 
 
-
             $.fn.dataTable.ext.errMode = 'none';
             var dtable = $('#tbll').DataTable({
                 "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
@@ -238,7 +244,7 @@
                 "searchHighlight": true,
                 "searchDelay": 350,
                 "ajax": {
-                    "url": "user/users",
+                    "url": "syllabus/syllabuss",
                     "contentType": "application/json",
                     "type": "POST",
                     "data": function (d) {
@@ -251,7 +257,7 @@
                 },
                 "columns": [
                     {"data": "id", className: "text-right", "visible": false},
-                    {"data": "name"},
+                    {"data": "heading"},
                     {"data": "ent_on"},
                     {"data": "ent_by"},
                     {"data": "mod_on"},
@@ -282,49 +288,14 @@
                     $(td).html('<label class="label label-danger" style="white-space: nowrap">Deactivated</label>');
                 }
             }
-            var user_type = new SlimSelect({
-                select: '#usertype',
-                placeholder: "Select a Usertype",
-                searchHighlight: true,
-
-                ajax: function (search, callback) {
-                    fetch('user/search-user-types', {
-                        method: 'POST',
-                        body: new URLSearchParams({search: search || ''})
-                    }).then(res => res.json()).then((data) => {
-                        callback(data);
-                    });
-                },
-                allowDeselect: true,
-                deselectLabel: '<span class="red">✖</span>'
-            });
-            $('#user_type').data('select', user_type);
 
 
-            $(document).on('click', '.editrec', function () {
 
-                loadDiv($('#tableSection'));
-                let id = $(this).parents('tr').data('id');
-                fetch('user/update-user/' + id).then(resp => resp.json())
-                        .then((data) => {
-                            clearForm();
-
-                            $('#name').val(data.name);
-                            $('#username').val(data.username);
-                            $('#email').val(data.email);
-                            $('#saveBtn').data('mode', 'update');
-                            $('#saveBtn').html('<i class="icon feather icon-save"></i>Update');
-                            $('#saveBtn').data('id', id);
-                            $('#formSection').fadeIn();
-                            $('#tableSection').hide();
-                            finishLoadDiv($('#tableSection'));
-                        });
-            });
             $(document).on('click', '.delrec', function () {
                 let id = $(this).parents('tr').data('id');
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "This User Will be Deleted!",
+                    text: "This Syllabus Will be Deleted!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -332,7 +303,7 @@
                     confirmButtonText: 'Yes, Proceed!',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        return fetch('user/deactivate-user', {
+                        return fetch('syllabus/deactivate-syllabus', {
                             method: 'POST',
                             body: new URLSearchParams({
                                 id: id
@@ -353,19 +324,29 @@
                         if (result.value.status !== 200) {
                             Swal.fire('Error!', result.value.msg, 'error');
                         } else {
-                            Swal.fire('Successfull!', 'User has been Deactivated !', 'success');
+                            Swal.fire('Successfull!', 'Syllabus has been Deactivated !', 'success');
                             dtable.ajax.reload();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
                         }
                     }
+                });
+            });
+
+
+
+            $(document).ready(function () {
+                // Add click event handler to both close buttons
+                $(' .close').click(function () {
+                    $('#formSection').hide();
+                    $('#tableSection').fadeIn();
                 });
             });
             $(document).on('click', '.rerec', function () {
                 let id = $(this).parents('tr').data('id');
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "User Will be Activated!",
+                    text: "Syllabus Will be Activated!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -373,7 +354,7 @@
                     confirmButtonText: 'Yes, Proceed!',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        return fetch('user/reactivate-user', {
+                        return fetch('syllabus/reactivate-syllabus', {
                             method: 'POST',
                             body: new URLSearchParams({
                                 id: id
@@ -394,7 +375,7 @@
                         if (result.value.status !== 200) {
                             Swal.fire('Error!', result.value.msg, 'error');
                         } else {
-                            Swal.fire('Successfull!', 'User has been Activated !', 'success');
+                            Swal.fire('Successfull!', 'Syllabus has been Activated !', 'success');
                             dtable.ajax.reload();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
@@ -402,20 +383,17 @@
                     }
                 });
             });
-            $('#addUserBtn').click(function () {
+            // Add an event listener to the "Add Syllabus" button
+            $('#addCarouselBtn').click(function () {
+                clearForm(); // Clear the form fields
                 $('#saveBtn').data('mode', 'save');
                 $('#saveBtn').html('<i class="icon feather icon-save"></i>Save');
-                clearForm();
                 $('#tableSection').hide();
                 $('#formSection').fadeIn();
             });
-            $('.cls-card').click(function () {
-                $('#formSection').hide();
-                $('#tableSection').fadeIn();
-            });
+
+            // Add a function to clear the form fields
             function clearForm() {
-                $('#formSection').find('input[type!=search]').val('');
-                $('#formSection').find('input[type!=search]').val('');
                 $('#formSection').find('input[type!=search]').val('');
                 $('#formSection').find('select').each(function () {
                     if ($(this).data('select')) {
@@ -427,122 +405,105 @@
                 });
             }
 
-// Function for saving a user
-            function saveUser() {
-                // Disable the saveBtn
-                $('#saveBtn').prop('disabled', true);
 
-                var userData = {
-                    name: $('#name').val(),
-                    username: $('#username').val(),
-                    email: $('#email').val(),
-                    usertype: $('#usertype').val()
-                };
+            $(document).on('click', '.editrec', function () {
+                loadDiv($('#tableSection'));
+                let id = $(this).parents('tr').data('id');
+                fetch('syllabus/details/' + id)
+                        .then(resp => resp.json())
+                        .then((resp) => {
+                            let data = resp.data;
+                            $('#heading').val(data.heading)
 
-                fetch('user/save-user', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(userData)
-                })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error(response.statusText);
-                            } else {
-                                return response.json();
-                            }
-                        })
-                        .then(data => {
-                            // Enable the saveBtn
-                            $('#saveBtn').prop('disabled', false);
+                            $('#saveBtn').data('mode', 'update'); // Set the mode to 'update'
+                            $('#saveBtn').data('id', id);
+                            $('#saveBtn').html('<i class="icon feather icon-save"></i>Update'); // Change button text to 'Update'
+                            $('#formSection').fadeIn();
+                            $('#tableSection').hide();
+                            finishLoadDiv($('#tableSection'));
+                        });
+            });
 
-                            console.error('Error:', error);
-                            Swal.fire('Error!', 'An error occurred while saving the user', 'error');
+            document.getElementById('saveBtn').addEventListener('click', function () {
+                if ($('#heading').val().trim() === '') {
+                    Swal.fire("Empty Heading!", "Please Enter a Valid Heading!", "warning");
+                    return;
+                }
+                let mode = $('#saveBtn').data('mode'); // Get the mode (save or update) from the button's data
 
-                        })
-                        .catch(error => {
-                            Swal.fire('Successful!', 'User has been successfully saved', 'success');
+                if (mode === 'save') {
+                    // Handle the 'save' action
+                    let fd = new FormData();
+                    let file = document.getElementById('file').files;
+                    let heading = document.getElementById('heading').value;
+                    fd.append('heading', heading);
+                    let para = document.getElementById('para').value;
+                    fd.append('para', para);
+                    for (var i = 0; i < file.length; i++) {
+                        fd.append('file', file[i]);
+                    }
+                    fetch('syllabus/save', {
+                        method: 'POST',
+                        body: fd
+                    }).then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        } else {
+                            Swal.fire('Successful!', 'Syllabus has been successfully saved', 'success');
                             clearForm();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
                             dtable.ajax.reload();
-                            // Enable the saveBtn in case of error
-                            $('#saveBtn').prop('disabled', false);
-                        });
-            }
+                        }
+                        return response.json();
+                    });
+                } else if (mode === 'update') {
+                    // Handle the 'update' action
+                    let id = $('#saveBtn').data('id');
+                    let heading = $('#heading').val();
+                    let para = $('#para').val();
+                    let fileInput = document.getElementById('file');
+                    let files = fileInput.files;
 
+                    let formData = new FormData();
+                    formData.append('id', id);
+                    formData.append('heading', heading);
+                    formData.append('para', para);
 
-// Function for updating a user
-            function updateUser() {
-                return fetch('user/update-user', {
-                    method: 'POST',
-                    body: new URLSearchParams({
-                        id: $('#saveBtn').data('id'),
-                        name: document.getElementById('name').value,
-                        username: document.getElementById('username').value,
-                        email: document.getElementById('email').value,
-                        usertype: document.getElementById('usertype').value,
-                    })
-                })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error(response.statusText);
+                    for (let i = 0; i < files.length; i++) {
+                        formData.append('file', files[i]);
+                    }
+
+                    $.ajax({
+                        url: 'syllabus/update', // Replace with the actual update endpoint
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            if (response.status === 200) {
+                                Swal.fire('Successful!', 'Syllabus details updated successfully', 'success');
+                                clearForm();
+                                $('#formSection').hide();
+                                $('#tableSection').fadeIn();
+                                dtable.ajax.reload();
                             } else {
-                                Swal.fire('Successful!', 'User has been successfully updated', 'success');
+                                Swal.fire('Successful!', 'Syllabus details updated successfully', 'success');
                                 clearForm();
                                 $('#formSection').hide();
                                 $('#tableSection').fadeIn();
                                 dtable.ajax.reload();
                             }
-                            return response.json();
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
-                            Swal.fire('Error!', 'An error occurred while updating the user', 'error');
-                        });
-            }
-
-
-
-            $('#saveBtn').click(function () {
-                var mode = $(this).data('mode'); // Get the mode from the data attribute of the button
-
-                if (mode === 'save') {
-                    saveUser(); // Call saveUser function if mode is 'save'
-                } else if (mode === 'update') {
-                    updateUser(); // Call updateUser function if mode is 'update'
-                } else {
-                    console.error('Invalid mode specified.');
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(xhr);
+                            console.log(status);
+                            console.log(error);
+                            Swal.fire('Error!', 'Failed to update Syllabus details', 'error');
+                        }
+                    });
                 }
             });
-
-
-
-
-
-            $.fn.dataTable.Debounce = function (table) {
-                var tableId = table.settings()[0].sTableId;
-                $('.dataTables_filter input[aria-controls="' + tableId + '"]')
-                        .unbind()
-                        .bind('input', (delay(function (e) {
-                            table.search($(this).val()).draw();
-                            return;
-                        }, 500)));
-            };
-            function delay(callback, ms) {
-                var timer = 0;
-                return function () {
-                    var context = this, args = arguments;
-                    clearTimeout(timer);
-                    timer = setTimeout(function () {
-                        callback.apply(context, args);
-                    }, ms || 0);
-                };
-            }
-
-            var debounce = new $.fn.dataTable.Debounce(dtable);
-
 
 
 

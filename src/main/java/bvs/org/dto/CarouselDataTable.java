@@ -15,16 +15,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserDataTable {
+public class CarouselDataTable {
 
     public Integer id;
-    public String name;
-    public String username;
-    public String usertype;
-    public String email;
-    public String password;
-    public String ent_on;
+    public String heading;
+    public String para;
+    public String path;
     public String ent_by;
+    public String ent_on;
+
     public String mod_by;
     public String mod_on;
     public String status;

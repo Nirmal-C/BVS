@@ -194,4 +194,14 @@ public class PageController {
     public String teamAdd() {
         return "admin/add_team";
     }
+
+    @GetMapping("/Admin-Carousel")
+    public String carouselAdd() {
+        return "admin/addCarousel";
+    }
+
+    @GetMapping("/Admin-UserTpe")
+    public String UserTypeAdd() {
+        return "admin/usertype";
+    }
 }

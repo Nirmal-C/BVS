@@ -1,5 +1,7 @@
+E:\BVS\BVS\src\main\java\bvs\org\model\UserType.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\NewsLetterController.java
 E:\BVS\BVS\src\main\java\bvs\org\model\Team.java
+E:\BVS\BVS\src\main\java\bvs\org\repo\PageRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\config\MainWebAppInitializer.java
 E:\BVS\BVS\src\main\java\bvs\org\datatable\DataTableRequest.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\TeamMembersDto.java
@@ -19,6 +21,7 @@ E:\BVS\BVS\src\main\java\bvs\org\controllers\MailController.java
 E:\BVS\BVS\src\main\java\bvs\org\model\User.java
 E:\BVS\BVS\src\main\java\bvs\org\config\MvcWebConfig.java
 E:\BVS\BVS\src\main\java\bvs\org\model\Staff.java
+E:\BVS\BVS\src\main\java\bvs\org\dto\UserTypeDataTable.java
 E:\BVS\BVS\src\main\java\bvs\org\model\TeamMembers.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\LoginController.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\DhammaVideoRepo.java
@@ -31,7 +34,9 @@ E:\BVS\BVS\src\main\java\bvs\org\controllers\StaffController.java
 E:\BVS\BVS\src\main\java\bvs\org\service\FormService.java
 E:\BVS\BVS\src\main\java\bvs\org\datatable\DataTableRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\model\Syllabus.java
+E:\BVS\BVS\src\main\java\bvs\org\dto\SlimSelectDTO.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\DhammaContentDto.java
+E:\BVS\BVS\src\main\java\bvs\org\dto\GetPagesDTO.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\TeamMembersRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\SyllabusDataTable.java
 E:\BVS\BVS\src\main\java\bvs\org\service\SchoolCalendarService.java
@@ -51,8 +56,10 @@ E:\BVS\BVS\src\main\java\bvs\org\repo\NewsLetterRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\PageController.java
 E:\BVS\BVS\src\main\java\bvs\org\model\Form.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\CommonResponse.java
+E:\BVS\BVS\src\main\java\bvs\org\repo\UserTypeRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\FormController.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\NewsLetterDataTable.java
+E:\BVS\BVS\src\main\java\bvs\org\model\Page.java
 E:\BVS\BVS\src\main\java\bvs\org\service\UserService.java
 E:\BVS\BVS\src\main\java\bvs\org\service\LoginService.java
 E:\BVS\BVS\src\main\java\bvs\org\service\LogoutService.java
@@ -60,6 +67,7 @@ E:\BVS\BVS\src\main\java\bvs\org\controllers\UserController.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\TeamDto.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\UserDataTable.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\TeamRepo.java
+E:\BVS\BVS\src\main\java\bvs\org\dto\GetPagesAccDTO.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\FormRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\service\DhammaVideoService.java
 E:\BVS\BVS\src\main\java\bvs\org\model\SchoolCalendar.java

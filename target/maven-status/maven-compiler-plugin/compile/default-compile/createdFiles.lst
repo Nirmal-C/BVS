@@ -6,11 +6,13 @@ bvs\org\dto\UserDataTable.class
 bvs\org\dto\StaffDataTable.class
 bvs\org\repo\TeamMembersRepo.class
 bvs\org\service\SyllabusService.class
+bvs\org\dto\GetPagesDTO.class
 bvs\org\config\HttpSessionAuditorAware.class
 bvs\org\dto\DhammaContentDto.class
 bvs\org\datatable\DataTableRequest$Order.class
 bvs\org\dto\SyllabusDataTable.class
 bvs\org\controllers\TeamController.class
+bvs\org\dto\SlimSelectDTO.class
 bvs\org\dto\TeamDto.class
 bvs\org\dto\DhammaAllDto.class
 bvs\org\config\SecurityFilter.class
@@ -25,6 +27,7 @@ bvs\org\controllers\CommonResponse.class
 bvs\org\dto\TeamAllDto.class
 bvs\org\controllers\StaffController.class
 bvs\org\model\DhammaVideo.class
+bvs\org\repo\PageRepo.class
 bvs\org\config\UserMail.class
 bvs\org\repo\UserRepo.class
 bvs\org\service\DhammaVideoService.class
@@ -33,6 +36,8 @@ bvs\org\config\MainWebAppInitializer.class
 bvs\org\controllers\DhammaVideoController.class
 bvs\org\model\NewsLetter.class
 bvs\org\dto\NewsLetterDataTable.class
+bvs\org\dto\UserTypeDataTable.class
+bvs\org\model\UserType.class
 bvs\org\model\SchoolCalendar.class
 bvs\org\config\DbConfig.class
 bvs\org\repo\SyllabusRepo.class
@@ -43,6 +48,7 @@ bvs\org\controllers\SyllabusController.class
 bvs\org\config\UserMail$1.class
 bvs\org\service\LoginService.class
 bvs\org\config\MvcWebConfig.class
+bvs\org\model\Page.class
 bvs\org\controllers\NewsLetterController.class
 bvs\org\datatable\DataTablesResponse.class
 bvs\org\config\PasswordMail$1.class
@@ -51,6 +57,7 @@ bvs\org\repo\DhammaContentRepo.class
 bvs\org\service\StaffService.class
 bvs\org\service\SchoolCalendarService.class
 bvs\org\controllers\PageController.class
+bvs\org\repo\UserTypeRepo.class
 bvs\org\dto\SchoolCalDataTable.class
 bvs\org\controllers\MailController.class
 bvs\org\datatable\DataTableRequest.class
@@ -60,6 +67,7 @@ bvs\org\repo\SchoolCalRepo.class
 bvs\org\model\DhammaContent.class
 bvs\org\dto\DhammaVideoDto.class
 bvs\org\model\TeamMembers.class
+bvs\org\dto\GetPagesAccDTO.class
 bvs\org\controllers\LoginController.class
 bvs\org\service\UserService.class
 bvs\org\repo\NewsLetterRepo.class

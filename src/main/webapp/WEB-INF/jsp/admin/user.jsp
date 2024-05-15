@@ -188,6 +188,13 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label for="user_type">User Type<span class="text-danger">*</span></label>
+                                        <select id="usertype" name="user_type" class="" required autocomplete="off">
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-6 col-12">
                                     <div class="form-group" style="width: 75rem">
                                         <div class="card-footer d-flex justify-content-end">
                                             <button id="saveBtn" class="btn btn-sm waves-effect waves-light btn-primary"><i class="icon feather icon-save"></i>Save</button>
@@ -275,6 +282,23 @@
                     $(td).html('<label class="label label-danger" style="white-space: nowrap">Deactivated</label>');
                 }
             }
+            var user_type = new SlimSelect({
+                select: '#usertype',
+                placeholder: "Select a Usertype",
+                searchHighlight: true,
+
+                ajax: function (search, callback) {
+                    fetch('user/search-user-types', {
+                        method: 'POST',
+                        body: new URLSearchParams({search: search || ''})
+                    }).then(res => res.json()).then((data) => {
+                        callback(data);
+                    });
+                },
+                allowDeselect: true,
+                deselectLabel: '<span class="red">✖</span>'
+            });
+            $('#user_type').data('select', user_type);
 
 
             $(document).on('click', '.editrec', function () {
@@ -411,7 +435,8 @@
                 var userData = {
                     name: $('#name').val(),
                     username: $('#username').val(),
-                    email: $('#email').val()
+                    email: $('#email').val(),
+                    usertype: $('#usertype').val()
                 };
 
                 fetch('user/save-user', {
@@ -457,6 +482,7 @@
                         name: document.getElementById('name').value,
                         username: document.getElementById('username').value,
                         email: document.getElementById('email').value,
+                        usertype: document.getElementById('usertype').value,
                     })
                 })
                         .then(response => {

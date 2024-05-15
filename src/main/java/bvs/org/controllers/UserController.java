@@ -7,10 +7,15 @@ package bvs.org.controllers;
 import bvs.org.config.UserMail;
 import bvs.org.datatable.DataTableRequest;
 import bvs.org.datatable.DataTablesResponse;
+import bvs.org.dto.GetPagesAccDTO;
+import bvs.org.dto.GetPagesDTO;
+import bvs.org.dto.SlimSelectDTO;
 import bvs.org.dto.UserDataTable;
+import bvs.org.dto.UserTypeDataTable;
 import bvs.org.model.User;
 
 import bvs.org.service.UserService;
+import jakarta.servlet.http.HttpSession;
 import java.sql.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,15 +45,9 @@ public class UserController {
         return service.getAllActiveUser();
     }
 
-//    @PostMapping("/save-user")
-//    public ResponseEntity<CommonResponse> saveUser(@RequestParam String name, @RequestParam String username, @RequestParam String email) throws Exception {
-//        service.saveUser(name, username, email);
-//        CommonResponse response = new CommonResponse("Success!", 200);
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//    }
     @PostMapping("/save-user")
     public ResponseEntity<String> saveUser(@RequestBody UserDataTable userDataTable) {
-        User user = service.saveUser(userDataTable.getName(), userDataTable.getUsername(), userDataTable.getEmail());
+        User user = service.saveUser(userDataTable.getName(), userDataTable.getUsername(), userDataTable.getUsertype(), userDataTable.getEmail());
 
         if (user != null) {
             return new ResponseEntity<>("User saved and email sent successfully!", HttpStatus.OK);
@@ -63,8 +62,8 @@ public class UserController {
     }
 
     @PostMapping("/update-user")
-    public ResponseEntity<CommonResponse> updateUser(@RequestParam Integer id, @RequestParam String name, @RequestParam String username, @RequestParam String email) throws Exception {
-        service.updateUser(id, name, username, email);
+    public ResponseEntity<CommonResponse> updateUser(@RequestParam Integer id, @RequestParam String name, @RequestParam String username, @RequestParam String usertype, @RequestParam String email) throws Exception {
+        service.updateUser(id, name, username, usertype, email);
         CommonResponse response = new CommonResponse("Success!", 200);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -81,6 +80,60 @@ public class UserController {
         service.reactivateUser(id);
         CommonResponse response = new CommonResponse("Success!", 200);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/userType")
+    public DataTablesResponse<UserTypeDataTable> getUserType(@RequestBody DataTableRequest param) throws Exception {
+        return service.getUserType(param);
+    }
+
+    @PostMapping("/user-type-save")
+    public ResponseEntity<CommonResponse> saveUserType(@RequestParam String name, @RequestParam String pages) throws Exception {
+        service.saveUserType(name, pages);
+        CommonResponse response = new CommonResponse("Success!", 200);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/user-type-update")
+    public ResponseEntity<CommonResponse> updateUserType(@RequestParam Integer id, @RequestParam String name, @RequestParam String pages) throws Exception {
+        service.updateUserType(id, name, pages);
+        CommonResponse response = new CommonResponse("Success!", 200);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/deactivate-user-Type")
+    public ResponseEntity<CommonResponse> deactivateUserType(@RequestParam Integer id) throws Exception {
+        service.deactivateUserType(id);
+        CommonResponse response = new CommonResponse("Success!", 200);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/reactivate-user-Type")
+    public ResponseEntity<CommonResponse> reactivateUserType(@RequestParam Integer id) throws Exception {
+        service.reactivateUserType(id);
+        CommonResponse response = new CommonResponse("Success!", 200);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/getpages")
+    public GetPagesDTO getPage() throws Exception {
+
+        return service.getPage();
+    }
+
+    @RequestMapping("/page-access")
+    public Iterable<GetPagesAccDTO> getPageAccess(HttpSession session) throws Exception {
+        return service.getPageAccess((Integer) session.getAttribute("uid"));
+    }
+
+    @PostMapping("/get-userType")
+    public GetPagesDTO getUserType(@RequestParam Integer id) throws Exception {
+        return service.getSelectedPage(id);
+    }
+
+    @PostMapping("/search-user-types")
+    public Iterable<SlimSelectDTO> searchUserTypes(@RequestParam String search) throws Exception {
+        return service.getUserTypeIdAndName(search);
     }
 
 }

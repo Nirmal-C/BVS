@@ -158,7 +158,7 @@
                 box-sizing: border-box;
             }
 
-            .carousel-caption h5,
+            .carousel-caption h2,
             .carousel-caption p {
                 margin: 0;
                 text-align: left;
@@ -366,7 +366,7 @@
 
                                 const caption = document.createElement('div');
                                 caption.classList.add('carousel-caption');
-                                const heading = document.createElement('h5');
+                                const heading = document.createElement('h2');
                                 heading.innerText = item.heading;
                                 const paragraph = document.createElement('p');
                                 paragraph.innerText = item.para;

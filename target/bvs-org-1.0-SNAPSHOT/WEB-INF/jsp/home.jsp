@@ -168,7 +168,7 @@
             .carousel-item img {
                 max-width: 1920px;
                 height: 450px;
-                object-fit: cover;
+                object-fit: fill;
             }
             .carousel-control-prev,
             .carousel-control-next {

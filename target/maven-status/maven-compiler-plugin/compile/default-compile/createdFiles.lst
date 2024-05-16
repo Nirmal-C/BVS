@@ -18,9 +18,11 @@ bvs\org\dto\DhammaAllDto.class
 bvs\org\config\SecurityFilter.class
 bvs\org\config\MvcWebApplicationInitializer.class
 bvs\org\model\Form.class
+bvs\org\controllers\CarouselController.class
 bvs\org\controllers\LogoutController.class
 bvs\org\datatable\DataTableRequest$Column.class
 bvs\org\model\Syllabus.class
+bvs\org\repo\CarouselRepo.class
 bvs\org\dto\FormDataTable.class
 bvs\org\dto\TeamMembersDto.class
 bvs\org\controllers\CommonResponse.class
@@ -32,10 +34,12 @@ bvs\org\config\UserMail.class
 bvs\org\repo\UserRepo.class
 bvs\org\service\DhammaVideoService.class
 bvs\org\datatable\DataTableRepo.class
+bvs\org\service\CarouselService.class
 bvs\org\config\MainWebAppInitializer.class
 bvs\org\controllers\DhammaVideoController.class
 bvs\org\model\NewsLetter.class
 bvs\org\dto\NewsLetterDataTable.class
+bvs\org\model\Carousel.class
 bvs\org\dto\UserTypeDataTable.class
 bvs\org\model\UserType.class
 bvs\org\model\SchoolCalendar.class
@@ -72,6 +76,7 @@ bvs\org\controllers\LoginController.class
 bvs\org\service\UserService.class
 bvs\org\repo\NewsLetterRepo.class
 bvs\org\repo\TeamRepo.class
+bvs\org\dto\CarouselDataTable.class
 bvs\org\config\PasswordMail.class
 bvs\org\repo\FormRepo.class
 bvs\org\datatable\DataTableRequest$Search.class

@@ -142,13 +142,74 @@
                     height: auto;
                 }
             }
+            .carousel-img-container {
+                position: relative;
+                width: 100%;
+            }
+
+            .carousel-caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .carousel-caption h5,
+            .carousel-caption p {
+                margin: 0;
+                text-align: left;
+                width: 100%;
+            }
+
+            .carousel-item img {
+                max-width: 1920px;
+                height: 450px;
+                object-fit: cover;
+            }
+            .carousel-control-prev,
+            .carousel-control-next {
+                color: #fff; /* Change color of the arrows */
+                opacity: 0.8; /* Adjust opacity for better visibility */
+            }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                opacity: 1; /* Increase opacity on hover */
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                filter: invert(1); /* Invert icon color for better contrast */
+            }
+
         </style>
 
 
 
         <div class="slideshow-pan">
             <div class="background-image"></div>
+            <div class="dhamma-carousel">
+
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+
+            </div>
             <div id="banner">
+
                 <div class="container_12">
                     <!-- First Column -->
                     <div class="grid_6 alpha">
@@ -280,5 +341,52 @@
         <script type="text/javascript" src="files/js/jquery.highlight.js"></script>
         <script type="text/javascript" src="files/js/dataTables.searchHighlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Fetch data
+                fetch('carousel/images')
+                        .then(response => response.json())
+                        .then(data => {
+                            const carouselInner = document.getElementById('carouselInner');
+                            // Iterate through data and create carousel items
+                            data.forEach((item, index) => {
+                                const carouselItem = document.createElement('div');
+                                carouselItem.classList.add('carousel-item');
+                                if (index === 0) {
+                                    carouselItem.classList.add('active');
+                                }
+
+                                const imgContainer = document.createElement('div');
+                                imgContainer.classList.add('carousel-img-container');
+
+                                const img = document.createElement('img');
+                                img.classList.add('d-block', 'w-100');
+                                img.src = `carousel/path/carousels/` + item.path;
+                                img.alt = `Slide ${index + 1}`;
+
+                                const caption = document.createElement('div');
+                                caption.classList.add('carousel-caption');
+                                const heading = document.createElement('h5');
+                                heading.innerText = item.heading;
+                                const paragraph = document.createElement('p');
+                                paragraph.innerText = item.para;
+
+                                caption.appendChild(heading);
+                                caption.appendChild(paragraph);
+
+                                imgContainer.appendChild(img);
+                                imgContainer.appendChild(caption);
+
+                                carouselItem.appendChild(imgContainer);
+
+                                carouselInner.appendChild(carouselItem);
+                            });
+                        })
+                        .catch(error => console.error('Error fetching data:', error));
+            });
+
+
+
+        </script>
     </body>
 </html>

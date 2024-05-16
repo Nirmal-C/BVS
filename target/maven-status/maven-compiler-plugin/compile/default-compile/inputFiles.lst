@@ -4,6 +4,7 @@ E:\BVS\BVS\src\main\java\bvs\org\model\Team.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\PageRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\config\MainWebAppInitializer.java
 E:\BVS\BVS\src\main\java\bvs\org\datatable\DataTableRequest.java
+E:\BVS\BVS\src\main\java\bvs\org\repo\CarouselRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\TeamMembersDto.java
 E:\BVS\BVS\src\main\java\bvs\org\service\TeamService.java
 E:\BVS\BVS\src\main\java\bvs\org\model\DhammaVideo.java
@@ -12,6 +13,7 @@ E:\BVS\BVS\src\main\java\bvs\org\model\NewsLetter.java
 E:\BVS\BVS\src\main\java\bvs\org\model\DhammaContent.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\TeamAllDto.java
 E:\BVS\BVS\src\main\java\bvs\org\config\HttpSessionAuditorAware.java
+E:\BVS\BVS\src\main\java\bvs\org\service\CarouselService.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\SchoolCalendarController.java
 E:\BVS\BVS\src\main\java\bvs\org\datatable\DataTablesResponse.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\DhammaAllDto.java
@@ -26,11 +28,13 @@ E:\BVS\BVS\src\main\java\bvs\org\model\TeamMembers.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\LoginController.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\DhammaVideoRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\StaffDataTable.java
+E:\BVS\BVS\src\main\java\bvs\org\dto\CarouselDataTable.java
 E:\BVS\BVS\src\main\java\bvs\org\service\SyllabusService.java
 E:\BVS\BVS\src\main\java\bvs\org\config\DbConfig.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\StaffRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\config\UserMail.java
 E:\BVS\BVS\src\main\java\bvs\org\controllers\StaffController.java
+E:\BVS\BVS\src\main\java\bvs\org\controllers\CarouselController.java
 E:\BVS\BVS\src\main\java\bvs\org\service\FormService.java
 E:\BVS\BVS\src\main\java\bvs\org\datatable\DataTableRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\model\Syllabus.java
@@ -69,6 +73,7 @@ E:\BVS\BVS\src\main\java\bvs\org\dto\UserDataTable.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\TeamRepo.java
 E:\BVS\BVS\src\main\java\bvs\org\dto\GetPagesAccDTO.java
 E:\BVS\BVS\src\main\java\bvs\org\repo\FormRepo.java
+E:\BVS\BVS\src\main\java\bvs\org\model\Carousel.java
 E:\BVS\BVS\src\main\java\bvs\org\service\DhammaVideoService.java
 E:\BVS\BVS\src\main\java\bvs\org\model\SchoolCalendar.java
 E:\BVS\BVS\src\main\java\bvs\org\config\SecurityFilter.java

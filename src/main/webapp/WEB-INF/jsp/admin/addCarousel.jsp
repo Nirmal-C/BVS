@@ -161,7 +161,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="text-right">
-                                    <button id="addCarouselBtn" class="btn btn-sm waves-effect waves-light btn-danger"><i class="icon feather icon-plus"></i>Add Syllabus</button>
+                                    <button id="addCarouselBtn" class="btn btn-sm waves-effect waves-light btn-danger"><i class="icon feather icon-plus"></i>Add Carousel</button>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +187,7 @@
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
                                         <label for="heading">Please Enter Content Here<span class="text-danger">*</span></label>
-                                        <input id="para" type="text" name="para" class="form-control"  required autocomplete="off">
+                                        <textarea id="para" type="text" name="para" class="form-control"  required autocomplete="off"></textarea>
                                     </div>
                                 </div>
 
@@ -244,7 +244,7 @@
                 "searchHighlight": true,
                 "searchDelay": 350,
                 "ajax": {
-                    "url": "syllabus/syllabuss",
+                    "url": "carousel/carousels",
                     "contentType": "application/json",
                     "type": "POST",
                     "data": function (d) {
@@ -295,7 +295,7 @@
                 let id = $(this).parents('tr').data('id');
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "This Syllabus Will be Deleted!",
+                    text: "This Carousel Will be Deleted!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -303,7 +303,7 @@
                     confirmButtonText: 'Yes, Proceed!',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        return fetch('syllabus/deactivate-syllabus', {
+                        return fetch('carousel/deactivate-carousel', {
                             method: 'POST',
                             body: new URLSearchParams({
                                 id: id
@@ -324,7 +324,7 @@
                         if (result.value.status !== 200) {
                             Swal.fire('Error!', result.value.msg, 'error');
                         } else {
-                            Swal.fire('Successfull!', 'Syllabus has been Deactivated !', 'success');
+                            Swal.fire('Successfull!', 'Carousel has been Deactivated !', 'success');
                             dtable.ajax.reload();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
@@ -346,7 +346,7 @@
                 let id = $(this).parents('tr').data('id');
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "Syllabus Will be Activated!",
+                    text: "Carousel Will be Activated!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -354,7 +354,7 @@
                     confirmButtonText: 'Yes, Proceed!',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        return fetch('syllabus/reactivate-syllabus', {
+                        return fetch('carousel/reactivate-carousel', {
                             method: 'POST',
                             body: new URLSearchParams({
                                 id: id
@@ -375,7 +375,7 @@
                         if (result.value.status !== 200) {
                             Swal.fire('Error!', result.value.msg, 'error');
                         } else {
-                            Swal.fire('Successfull!', 'Syllabus has been Activated !', 'success');
+                            Swal.fire('Successfull!', 'Carousel has been Activated !', 'success');
                             dtable.ajax.reload();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
@@ -383,7 +383,7 @@
                     }
                 });
             });
-            // Add an event listener to the "Add Syllabus" button
+            // Add an event listener to the "Add Carousel" button
             $('#addCarouselBtn').click(function () {
                 clearForm(); // Clear the form fields
                 $('#saveBtn').data('mode', 'save');
@@ -395,6 +395,7 @@
             // Add a function to clear the form fields
             function clearForm() {
                 $('#formSection').find('input[type!=search]').val('');
+                $('#formSection').find('textarea').val('');
                 $('#formSection').find('select').each(function () {
                     if ($(this).data('select')) {
                         if ($(this).data('select').ajax) {
@@ -409,11 +410,12 @@
             $(document).on('click', '.editrec', function () {
                 loadDiv($('#tableSection'));
                 let id = $(this).parents('tr').data('id');
-                fetch('syllabus/details/' + id)
+                fetch('carousel/details/' + id)
                         .then(resp => resp.json())
                         .then((resp) => {
                             let data = resp.data;
                             $('#heading').val(data.heading)
+                            $('#para').val(data.para)
 
                             $('#saveBtn').data('mode', 'update'); // Set the mode to 'update'
                             $('#saveBtn').data('id', id);
@@ -442,14 +444,14 @@
                     for (var i = 0; i < file.length; i++) {
                         fd.append('file', file[i]);
                     }
-                    fetch('syllabus/save', {
+                    fetch('carousel/save', {
                         method: 'POST',
                         body: fd
                     }).then(response => {
                         if (!response.ok) {
                             throw new Error(response.statusText);
                         } else {
-                            Swal.fire('Successful!', 'Syllabus has been successfully saved', 'success');
+                            Swal.fire('Successful!', 'Carousel has been successfully saved', 'success');
                             clearForm();
                             $('#formSection').hide();
                             $('#tableSection').fadeIn();
@@ -475,20 +477,20 @@
                     }
 
                     $.ajax({
-                        url: 'syllabus/update', // Replace with the actual update endpoint
+                        url: 'carousel/update', // Replace with the actual update endpoint
                         type: 'POST',
                         data: formData,
                         processData: false,
                         contentType: false,
                         success: function (response) {
                             if (response.status === 200) {
-                                Swal.fire('Successful!', 'Syllabus details updated successfully', 'success');
+                                Swal.fire('Successful!', 'Carousel details updated successfully', 'success');
                                 clearForm();
                                 $('#formSection').hide();
                                 $('#tableSection').fadeIn();
                                 dtable.ajax.reload();
                             } else {
-                                Swal.fire('Successful!', 'Syllabus details updated successfully', 'success');
+                                Swal.fire('Successful!', 'Carousel details updated successfully', 'success');
                                 clearForm();
                                 $('#formSection').hide();
                                 $('#tableSection').fadeIn();
@@ -499,7 +501,7 @@
                             console.log(xhr);
                             console.log(status);
                             console.log(error);
-                            Swal.fire('Error!', 'Failed to update Syllabus details', 'error');
+                            Swal.fire('Error!', 'Failed to update Carousel details', 'error');
                         }
                     });
                 }

@@ -27,7 +27,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Setter
 @Getter
 @ToString
-@Table("syllabus")
+@Table("carousel")
 public class Carousel {
 
     @Id

@@ -257,7 +257,7 @@
             <div id="banner">
 
                 <div class="container_12">
-                    <!-- First Column -->
+
                     <div class="grid_6 alpha">
                         <div class="column-fix">
 

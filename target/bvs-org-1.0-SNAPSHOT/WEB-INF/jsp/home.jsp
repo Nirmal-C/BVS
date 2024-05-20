@@ -217,12 +217,12 @@
             /* Small screens (phones) */
             @media (max-width: 767px) {
                 .carousel-caption {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     padding: 10px 15px;
                 }
 
                 .carousel-caption h2 {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                 }
 
                 .carousel-control-prev,
@@ -257,7 +257,7 @@
             <div id="banner">
 
                 <div class="container_12">
-                    <!-- First Column -->
+
                     <div class="grid_6 alpha">
                         <div class="column-fix">
 

@@ -166,10 +166,12 @@
             }
 
             .carousel-item img {
-                max-width: 1920px;
-                height: 450px;
-                object-fit: fill;
+                width: 100%;
+                height: auto;
+                max-height: 450px;
+                object-fit: cover;
             }
+
             .carousel-control-prev,
             .carousel-control-next {
                 color: #fff; /* Change color of the arrows */
@@ -185,6 +187,50 @@
             .carousel-control-next-icon {
                 filter: invert(1); /* Invert icon color for better contrast */
             }
+
+            /* Media queries for different screen sizes */
+
+            /* Large screens (desktops, laptops) */
+            @media (min-width: 992px) {
+                .carousel-caption {
+                    font-size: 1.5rem;
+                    padding: 20px 30px;
+                }
+
+                .carousel-caption h2 {
+                    font-size: 2rem;
+                }
+            }
+
+            /* Medium screens (tablets) */
+            @media (min-width: 768px) and (max-width: 991px) {
+                .carousel-caption {
+                    font-size: 1.25rem;
+                    padding: 15px 20px;
+                }
+
+                .carousel-caption h2 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            /* Small screens (phones) */
+            @media (max-width: 767px) {
+                .carousel-caption {
+                    font-size: 1rem;
+                    padding: 10px 15px;
+                }
+
+                .carousel-caption h2 {
+                    font-size: 1rem;
+                }
+
+                .carousel-control-prev,
+                .carousel-control-next {
+                    width: 10%;
+                }
+            }
+
 
         </style>
 
